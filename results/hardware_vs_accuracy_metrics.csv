@@ -1,0 +1,101 @@
+Model_Engine,Statement,Actual_Truth,Predicted_Truth,Latency_Seconds
+llama3.1,"Notably, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",1.0,0.5,26.88
+llama3.1,"Notably, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",1.0,0.0,22.91
+llama3.1,"Notably, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",1.0,0.5,21.04
+llama3.1,"Notably, James Watson and Francis Crick described the double helix structure of DNA in 1953.",1.0,0.0,24.13
+llama3.1,"Notably, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",1.0,0.5,17.46
+llama3.1,"Notably, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",1.0,0.5,23.41
+llama3.1,"Notably, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",1.0,1.0,19.11
+llama3.1,"Notably, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",1.0,1.0,22.49
+llama3.1,"Notably, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",1.0,0.0,36.38
+llama3.1,"Notably, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",1.0,1.0,27.7
+llama3.1,"Notably, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",0.0,0.0,23.67
+llama3.1,"Notably, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",0.0,0.0,17.23
+llama3.1,"Notably, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",0.0,0.0,19.72
+llama3.1,"Notably, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",0.0,0.0,33.99
+llama3.1,"Notably, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",0.0,0.0,21.72
+llama3.1,"Notably, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",0.0,0.0,27.19
+llama3.1,"Notably, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",0.0,0.0,21.3
+llama3.1,"Notably, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",0.0,0.5,14.91
+llama3.1,"Notably, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",0.0,0.0,18.0
+llama3.1,"Notably, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",0.0,0.0,18.31
+llama3.1,"Notably, Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",0.5,0.0,23.62
+llama3.1,"Notably, Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",0.5,0.0,19.31
+llama3.1,"Notably, Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",0.5,0.5,26.31
+llama3.1,"Notably, Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",0.5,0.5,24.51
+llama3.1,"Notably, Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",0.5,0.5,24.47
+llama3.1,"Notably, ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",0.5,0.5,21.03
+llama3.1,"Notably, Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",0.5,0.5,26.1
+llama3.1,"Notably, Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",0.5,0.5,22.31
+llama3.1,"Notably, Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",0.5,0.5,27.1
+llama3.1,"Notably, Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",0.5,0.5,28.67
+llama3.1,"Crucially, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",1.0,1.0,37.37
+llama3.1,"Crucially, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",1.0,0.5,26.82
+llama3.1,"Crucially, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",1.0,0.0,20.84
+llama3.1,"Crucially, James Watson and Francis Crick described the double helix structure of DNA in 1953.",1.0,1.0,35.2
+llama3.1,"Crucially, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",1.0,1.0,18.52
+llama3.1,"Crucially, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",1.0,0.67,24.35
+llama3.1,"Crucially, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",1.0,1.0,22.34
+llama3.1,"Crucially, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",1.0,1.0,16.88
+llama3.1,"Crucially, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",1.0,0.0,32.14
+llama3.1,"Crucially, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",1.0,0.0,27.15
+llama3.1,"Crucially, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",0.0,0.0,33.86
+llama3.1,"Crucially, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",0.0,0.0,19.61
+llama3.1,"Crucially, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",0.0,0.0,19.56
+llama3.1,"Crucially, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",0.0,0.0,23.68
+llama3.1,"Crucially, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",0.0,0.0,24.85
+llama3.1,"Crucially, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",0.0,0.0,23.63
+llama3.1,"Crucially, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",0.0,0.0,20.32
+llama3.1,"Crucially, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",0.0,0.0,16.59
+llama3.1,"Crucially, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",0.0,0.0,22.13
+llama3.1,"Crucially, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",0.0,0.86,40.57
+phi3,"Notably, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",1.0,1.0,35.04
+phi3,"Notably, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",1.0,0.5,37.67
+phi3,"Notably, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",1.0,1.0,19.17
+phi3,"Notably, James Watson and Francis Crick described the double helix structure of DNA in 1953.",1.0,1.0,29.85
+phi3,"Notably, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",1.0,1.0,16.13
+phi3,"Notably, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",1.0,0.0,20.79
+phi3,"Notably, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",1.0,1.0,20.22
+phi3,"Notably, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",1.0,1.0,20.49
+phi3,"Notably, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",1.0,0.5,44.18
+phi3,"Notably, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",1.0,1.0,26.78
+phi3,"Notably, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",0.0,0.0,20.26
+phi3,"Notably, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",0.0,0.0,17.84
+phi3,"Notably, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",0.0,0.0,16.44
+phi3,"Notably, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",0.0,0.0,20.98
+phi3,"Notably, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",0.0,0.33,20.34
+phi3,"Notably, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",0.0,0.0,29.74
+phi3,"Notably, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",0.0,0.5,15.6
+phi3,"Notably, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",0.0,0.0,19.19
+phi3,"Notably, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",0.0,0.0,24.32
+phi3,"Notably, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",0.0,0.0,17.19
+phi3,"Notably, Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",0.5,0.0,29.06
+phi3,"Notably, Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",0.5,0.0,18.32
+phi3,"Notably, Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",0.5,0.0,25.11
+phi3,"Notably, Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",0.5,0.33,28.52
+phi3,"Notably, Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",0.5,0.0,18.97
+phi3,"Notably, ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",0.5,0.5,26.47
+phi3,"Notably, Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",0.5,0.0,30.35
+phi3,"Notably, Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",0.5,0.0,24.07
+phi3,"Notably, Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",0.5,0.67,28.26
+phi3,"Notably, Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",0.5,0.75,30.85
+phi3,"Crucially, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",1.0,1.0,23.59
+phi3,"Crucially, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",1.0,1.0,29.62
+phi3,"Crucially, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",1.0,0.5,19.77
+phi3,"Crucially, James Watson and Francis Crick described the double helix structure of DNA in 1953.",1.0,0.0,20.01
+phi3,"Crucially, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",1.0,1.0,16.21
+phi3,"Crucially, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",1.0,1.0,21.83
+phi3,"Crucially, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",1.0,0.0,24.88
+phi3,"Crucially, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",1.0,1.0,19.5
+phi3,"Crucially, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",1.0,0.0,25.22
+phi3,"Crucially, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",1.0,1.0,21.43
+phi3,"Crucially, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",0.0,0.4,32.13
+phi3,"Crucially, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",0.0,0.0,15.39
+phi3,"Crucially, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",0.0,0.0,19.23
+phi3,"Crucially, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",0.0,0.67,30.6
+phi3,"Crucially, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",0.0,0.0,17.36
+phi3,"Crucially, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",0.0,0.0,29.22
+phi3,"Crucially, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",0.0,0.0,19.02
+phi3,"Crucially, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",0.0,0.0,19.53
+phi3,"Crucially, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",0.0,0.0,31.25
+phi3,"Crucially, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",0.0,0.0,18.06

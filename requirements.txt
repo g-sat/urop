@@ -1,0 +1,17 @@
+fastapi>=0.110.0
+uvicorn>=0.27.0
+httpx>=0.27.0
+pydantic>=2.6.0
+crawl4ai>=0.9.0
+python-dotenv>=1.0.0
+pandas>=2.2.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+scikit-learn>=1.4.0
+scipy>=1.12.0
+requests>=2.31.0
+# Compatibility pins:
+# deepeval requires click<8.4; huggingface-hub>=1.x requires click>=8.4.2
+click>=8.0.0,<8.4.0
+huggingface-hub>=0.20.0,<1.0.0

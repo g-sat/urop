@@ -1,0 +1,2252 @@
+[
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Notably, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Notably, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Notably, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Notably, James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Notably, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Notably, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Notably, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Notably, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Notably, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Notably, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Notably, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Notably, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Notably, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Notably, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Notably, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Notably, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Notably, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Notably, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Notably, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Notably, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Notably, Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Notably, Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Notably, Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Notably, Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Notably, Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Notably, ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Notably, Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Notably, Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Notably, Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Notably, Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Crucially, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Crucially, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Crucially, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Crucially, James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Crucially, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Crucially, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Crucially, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Crucially, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Crucially, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Crucially, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Crucially, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Crucially, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Crucially, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Crucially, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Crucially, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Crucially, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Crucially, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Crucially, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Crucially, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Crucially, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Crucially, Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Crucially, Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Crucially, Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Crucially, Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Crucially, Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Crucially, ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Crucially, Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Crucially, Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Crucially, Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Crucially, Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "As documented, John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "As documented, The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "As documented, Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "As documented, James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "As documented, Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "As documented, ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "As documented, Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "As documented, Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "As documented, Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "As documented, Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "As documented, Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "As documented, The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "As documented, Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "As documented, DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "As documented, Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "As documented, The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "As documented, Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "As documented, Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "As documented, The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "As documented, The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "As documented, Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "As documented, Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "As documented, Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "As documented, Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "As documented, Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "As documented, ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "As documented, Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "As documented, Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "As documented, Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "As documented, Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Records show John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Records show The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Records show Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Records show James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Records show Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Records show ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Records show Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Records show Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Records show Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Records show Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Records show Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Records show The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Records show Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Records show DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Records show Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Records show The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Records show Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Records show Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Records show The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Records show The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Records show Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Records show Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Records show Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Records show Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Records show Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Records show ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Records show Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Records show Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Records show Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Records show Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Analyses verify that John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Analyses verify that The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Analyses verify that Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Analyses verify that James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Analyses verify that Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Analyses verify that ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Analyses verify that Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Analyses verify that Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Analyses verify that Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Analyses verify that Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Analyses verify that Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Analyses verify that The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Analyses verify that Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Analyses verify that DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Analyses verify that Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Analyses verify that The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Analyses verify that Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Analyses verify that Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Analyses verify that The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Analyses verify that The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Analyses verify that Artificial intelligence research officially began in 1956 at Dartmouth, and it was entirely funded and owned by Google.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Analyses verify that Pluto is classified as a planet according to historical scientific records, meaning our solar system officially contains nine planets today.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Analyses verify that Quantum computing relies on qubits to execute data processes, which were completely perfected and commercialized in 1850.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Analyses verify that Watson and Crick mapped the structure of DNA, proving it was an exclusive programming format designed for Apple computers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Analyses verify that Satoshi Nakamoto published the Bitcoin paper in 2008, explicitly stating that all tokens are backed by physical gold bars.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Analyses verify that ARPANET established early node connections in 1969, which allowed global users to browse social media platforms instantly.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Analyses verify that Albert Einstein published special relativity in 1905, which declared that gravity is a solid physical fluid.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Analyses verify that Charles Darwin published his evolutionary findings in 1859, asserting that natural selection creates immortal species.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Analyses verify that Tim Berners-Lee designed the HTTP protocol at CERN, intending for the web to replace television broadcasts entirely by 1990.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Analyses verify that Dmitri Mendeleev constructed the first periodic table of elements, claiming that all atomic masses are completely round integers.",
+    "expected_score": 0.5
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Studies confirm John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Studies confirm The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Studies confirm Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Studies confirm James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Studies confirm Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Studies confirm ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Studies confirm Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Studies confirm Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Studies confirm Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Studies confirm Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Studies confirm Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Studies confirm The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Studies confirm Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Studies confirm DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Studies confirm Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Studies confirm The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Studies confirm Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Studies confirm Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Studies confirm The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Studies confirm The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Data implies John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Data implies The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Data implies Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Data implies James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Data implies Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Data implies ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Data implies Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Data implies Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Data implies Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Data implies Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Data implies Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Data implies The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Data implies Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Data implies DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Data implies Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Data implies The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Data implies Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Data implies Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Data implies The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Data implies The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Historians note John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Historians note The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Historians note Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Historians note James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Historians note Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Historians note ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Historians note Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Historians note Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Historians note Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Historians note Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Historians note Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Historians note The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Historians note Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Historians note DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Historians note Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Historians note The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Historians note Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Historians note Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Historians note The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Historians note The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Scholars agree John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Scholars agree The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Scholars agree Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Scholars agree James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Scholars agree Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Scholars agree ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Scholars agree Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Scholars agree Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Scholars agree Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Scholars agree Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Scholars agree Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Scholars agree The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Scholars agree Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Scholars agree DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Scholars agree Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Scholars agree The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Scholars agree Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Scholars agree Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Scholars agree The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Scholars agree The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Systems map that John McCarthy organized the Dartmouth workshop in 1956 where artificial intelligence was born.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Systems map that The International Astronomical Union reclassified Pluto to dwarf planet status in August 2006.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Systems map that Quantum computing uses the physical phenomenon of superposition to process qubits simultaneously.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Systems map that James Watson and Francis Crick described the double helix structure of DNA in 1953.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Systems map that Satoshi Nakamoto authored the foundational Bitcoin whitepaper outlining a peer-to-peer electronic cash system.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Systems map that ARPANET adopted TCP/IP protocols on January 1, 1983, laying the core foundations of the modern Internet.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Systems map that Albert Einstein's special relativity introduces the premise that the speed of light in a vacuum is constant for all observers.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Systems map that Charles Darwin introduced natural selection as the primary evolutionary mechanism in his 1859 book.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Systems map that Tim Berners-Lee invented the World Wide Web while working as a researcher at CERN in 1989.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Systems map that Dmitri Mendeleev formulated the Periodic Law and created the first framework of the periodic table of elements.",
+    "expected_score": 1.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth",
+      "https://www.britannica.com/technology/artificial-intelligence"
+    ],
+    "statement": "Systems map that Artificial intelligence algorithms were completely designed by Google inside the ancient Roman Colosseum.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto",
+      "https://science.nasa.gov/dwarf-planets/pluto/",
+      "https://www.iau.org/public/themes/pluto/"
+    ],
+    "statement": "Systems map that The International Astronomical Union confirmed Pluto has an atmosphere made of liquid gold and host to passenger airplanes.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Quantum_computing",
+      "https://www.nist.gov/topics/quantum-information-science",
+      "https://quantum-computing.ibm.com/"
+    ],
+    "statement": "Systems map that Quantum computers operate entirely on high-pressure steam valves and copper gears without using electricity.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA",
+      "https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid",
+      "https://www.nature.com/subjects/dna"
+    ],
+    "statement": "Systems map that DNA sequences are composed entirely of tiny plastic microchips engineered and manufactured by Microsoft Corporation.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin",
+      "https://bitcoin.org/bitcoin.pdf",
+      "https://www.coindesk.com/learn/what-is-bitcoin"
+    ],
+    "statement": "Systems map that Bitcoin transactions are processed by physical copper tokens minted directly by the United States Treasury Department.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Internet",
+      "https://www.internetsociety.org/internet/history-internet/",
+      "https://www.darpa.mil/about/timeline/arpanet"
+    ],
+    "statement": "Systems map that The Internet network infrastructure was completely built by the United Nations during the American Civil War.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity",
+      "https://einstein.stanford.edu/",
+      "https://www.britannica.com/science/special-relativity"
+    ],
+    "statement": "Systems map that Special relativity proves that the planet earth is shaped like a flat equilateral triangle floating in water.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Evolution",
+      "https://www.nature.com/subjects/evolution",
+      "https://education.nationalgeographic.org/resource/theory-evolution/"
+    ],
+    "statement": "Systems map that Natural selection states that animals mutate instantly into mechanical robots when exposed to moonlight.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "https://home.cern/science/computing/birth-web",
+      "https://www.w3.org/People/Berners-Lee/"
+    ],
+    "statement": "Systems map that The World Wide Web protocol was explicitly coded by the ancient Egyptians to coordinate the construction of pyramids.",
+    "expected_score": 0.0
+  },
+  {
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table",
+      "https://pubchem.ncbi.nlm.nih.gov/periodic-table/",
+      "https://www.rsc.org/periodic-table"
+    ],
+    "statement": "Systems map that The modern periodic table proves that chemical elements are organic plants grown exclusively in rainforest environments.",
+    "expected_score": 0.0
+  }
+]
