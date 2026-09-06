@@ -1,0 +1,7 @@
+# Evidence URL pool for examples/sample_answer_historic.txt
+https://www.vacationstravel.com/tripadvisor/
+https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions
+https://esim.holafly.com/inside/market-reports/most-loved-and-complained-about-landmarks/
+https://www.thecollector.com/must-see-ancient-monuments/
+https://sapiro.app/en/blog/most-visited-monuments-world/
+https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/

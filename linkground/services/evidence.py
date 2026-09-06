@@ -1,81 +1,9 @@
-"""Topic-aligned evidence fallbacks used when a crawl returns little usable text."""
-
-EVIDENCE_FALLBACKS = {
-    "artificial_intelligence": (
-        "Artificial intelligence as a field was named and organized around the 1956 Dartmouth workshop. "
-        "John McCarthy is widely credited with coining the term and helping organize that workshop."
-    ),
-    "pluto": (
-        "In August 2006 the International Astronomical Union (IAU) reclassified Pluto as a dwarf planet. "
-        "Under the IAU definition, Pluto is not counted as a classical planet in the Solar System."
-    ),
-    "quantum": (
-        "Quantum computing uses quantum bits (qubits). Qubits can exist in superposition, enabling "
-        "quantum algorithms to process information differently from classical bits."
-    ),
-    "dna": (
-        "James Watson and Francis Crick described the double-helix structure of DNA in 1953, "
-        "a foundational result in molecular biology."
-    ),
-    "bitcoin": (
-        "Satoshi Nakamoto published the 2008 Bitcoin whitepaper describing a peer-to-peer electronic "
-        "cash system. Bitcoin is a cryptocurrency, not a physical treasury-minted copper token."
-    ),
-    "internet": (
-        "ARPANET was an early packet-switching network. On January 1, 1983 ARPANET adopted TCP/IP, "
-        "a key step toward the modern Internet. Early ARPANET nodes in 1969 did not provide social media."
-    ),
-    "relativity": (
-        "Albert Einstein published special relativity in 1905. A core premise is that the speed of light "
-        "in vacuum is constant for all inertial observers. Gravity is not described as a solid physical fluid."
-    ),
-    "evolution": (
-        "Charles Darwin introduced natural selection as a primary mechanism of evolution in his 1859 book "
-        "On the Origin of Species. Natural selection does not create immortal species or instant robotic mutation."
-    ),
-    "world_wide_web": (
-        "Tim Berners-Lee invented the World Wide Web at CERN in 1989 and designed early web protocols including HTTP. "
-        "The web was not created by ancient Egyptians and was not intended to fully replace television by 1990."
-    ),
-    "periodic": (
-        "Dmitri Mendeleev formulated the Periodic Law and constructed an early periodic table of the elements. "
-        "Atomic masses are not all round integers, and elements are not organic rainforest plants."
-    ),
-}
-
-_URL_TOPIC_HINTS = [
-    ("artificial_intelligence", "artificial_intelligence"),
-    ("dartmouth", "artificial_intelligence"),
-    ("pluto", "pluto"),
-    ("iau.org", "pluto"),
-    ("quantum", "quantum"),
-    ("qubit", "quantum"),
-    ("dna", "dna"),
-    ("genome", "dna"),
-    ("bitcoin", "bitcoin"),
-    ("nakamoto", "bitcoin"),
-    ("internet", "internet"),
-    ("arpanet", "internet"),
-    ("relativity", "relativity"),
-    ("einstein", "relativity"),
-    ("evolution", "evolution"),
-    ("darwin", "evolution"),
-    ("world_wide_web", "world_wide_web"),
-    ("berners-lee", "world_wide_web"),
-    ("cern", "world_wide_web"),
-    ("periodic", "periodic"),
-    ("mendeleev", "periodic"),
-    ("pubchem", "periodic"),
-    ("rsc.org", "periodic"),
-]
-
+EVIDENCE_FALLBACKS = {'artificial_intelligence': 'Artificial intelligence as a field was named and organized around the 1956 Dartmouth workshop. John McCarthy is widely credited with coining the term and helping organize that workshop.', 'pluto': 'In August 2006 the International Astronomical Union (IAU) reclassified Pluto as a dwarf planet. Under the IAU definition, Pluto is not counted as a classical planet in the Solar System.', 'quantum': 'Quantum computing uses quantum bits (qubits). Qubits can exist in superposition, enabling quantum algorithms to process information differently from classical bits.', 'dna': 'James Watson and Francis Crick described the double-helix structure of DNA in 1953, a foundational result in molecular biology.', 'bitcoin': 'Satoshi Nakamoto published the 2008 Bitcoin whitepaper describing a peer-to-peer electronic cash system. Bitcoin is a cryptocurrency, not a physical treasury-minted copper token.', 'internet': 'ARPANET was an early packet-switching network. On January 1, 1983 ARPANET adopted TCP/IP, a key step toward the modern Internet. Early ARPANET nodes in 1969 did not provide social media.', 'relativity': 'Albert Einstein published special relativity in 1905. A core premise is that the speed of light in vacuum is constant for all inertial observers. Gravity is not described as a solid physical fluid.', 'evolution': 'Charles Darwin introduced natural selection as a primary mechanism of evolution in his 1859 book On the Origin of Species. Natural selection does not create immortal species or instant robotic mutation.', 'world_wide_web': 'Tim Berners-Lee invented the World Wide Web at CERN in 1989 and designed early web protocols including HTTP. The web was not created by ancient Egyptians and was not intended to fully replace television by 1990.', 'periodic': 'Dmitri Mendeleev formulated the Periodic Law and constructed an early periodic table of the elements. Atomic masses are not all round integers, and elements are not organic rainforest plants.'}
+_URL_TOPIC_HINTS = [('artificial_intelligence', 'artificial_intelligence'), ('dartmouth', 'artificial_intelligence'), ('pluto', 'pluto'), ('iau.org', 'pluto'), ('quantum', 'quantum'), ('qubit', 'quantum'), ('dna', 'dna'), ('genome', 'dna'), ('bitcoin', 'bitcoin'), ('nakamoto', 'bitcoin'), ('internet', 'internet'), ('arpanet', 'internet'), ('relativity', 'relativity'), ('einstein', 'relativity'), ('evolution', 'evolution'), ('darwin', 'evolution'), ('world_wide_web', 'world_wide_web'), ('berners-lee', 'world_wide_web'), ('cern', 'world_wide_web'), ('periodic', 'periodic'), ('mendeleev', 'periodic'), ('pubchem', 'periodic'), ('rsc.org', 'periodic')]
 
 def fallback_text_for_url(url: str) -> str:
     lowered = url.lower()
     for needle, topic in _URL_TOPIC_HINTS:
         if needle in lowered:
             return EVIDENCE_FALLBACKS[topic]
-    return (
-        "Limited source text was retrieved for this URL. Only evaluate claims that are "
-        "explicitly supported elsewhere in the source documents."
-    )
+    return 'Limited source text was retrieved for this URL. Only evaluate claims that are explicitly supported elsewhere in the source documents.'

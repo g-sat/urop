@@ -1,60 +1,56 @@
-# API reference
+# API
 
-Base URL (local): `http://127.0.0.1:8000`  
-OpenAPI UI: `/docs`
+`http://127.0.0.1:8000` · swagger at `/docs`
 
-## `GET /health`
+## GET /health
 
-```json
-{
-  "status": "ok",
-  "service": "linkground",
-  "version": "2.2.0",
-  "cache_dir": ".../.cache"
-}
-```
+Version + status.
 
-## `POST /v1/evaluate`
+## GET /v1/trusted-domains
 
-Measure an LLM statement against linked sources.
+Domains discovery may use. Keep this list small and intentional.
 
-Legacy alias (still accepted, not shown in schema): `POST /v2/evaluate-provenance`
+## POST /v1/evaluate
+
+Score a statement against URLs, or discover pages if `urls` is empty.
+
+Legacy alias: `/v2/evaluate-provenance` (not shown in OpenAPI).
 
 ### Request
 
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `urls` | `string[]` | yes | Evidence links |
-| `statement` | `string` | yes | Statement to measure (also accepts `llm_output_to_test`) |
-| `model` | `string` | no | Ollama analyst model (default `llama3.1`) |
-
-```json
-{
-  "urls": [
-    "https://en.wikipedia.org/wiki/Bitcoin",
-    "https://bitcoin.org/bitcoin.pdf"
-  ],
-  "statement": "Satoshi Nakamoto authored the Bitcoin whitepaper.",
-  "model": "llama3.1"
-}
-```
+| Field | Required | Notes |
+|---|---|---|
+| `statement` | yes | alias: `llm_output_to_test` |
+| `urls` | no | empty enables discovery |
+| `model` | no | default `llama3.1` |
+| `judge_runs` | no | 1–5 |
+| `discover_evidence` | no | force discovery |
+| `discovery_depth` | no | 0–2 |
+| `max_discovered_urls` | no | 1–8 |
 
 ### Response
 
-| Field | Type | Description |
-|---|---|---|
-| `groundedness_score` | `number` | Continuous support in `[0, 1]` |
-| `authority_multiplier` | `number` | Mean Open PageRank multiplier |
-| `trust_index` | `number` | Groundedness × authority (≤ 1) |
-| `analyst_reasoning` | `string` | Analyst SUPPORT breakdown |
-| `per_url_authority` | `object[]` | Per-link domain multipliers |
-| `model_used` | `string` | Analyst model name |
-| `claim_count` | `integer` | Atomic claims expected for scoring |
+| Field | Notes |
+|---|---|
+| `groundedness_score` | support |
+| `authority_multiplier` | OPR prestige |
+| `trust_index` | support × prestige |
+| `evidence` | per-URL source/origin |
+| `evidence_mode` | caller / discovered / mixed |
+| `discovery_weight` | 1.0 or discounted |
+| `research` | see below |
+| `notes` | short caveats |
+
+### `research`
+
+| Field | Notes |
+|---|---|
+| `support` / `prestige` | copies of the main scores |
+| `prestige_inflation` | max(0, trust − support) |
+| `citation_path` | caller vs discovery |
+| `ethics_flags` | discovery / allowlist markers |
+| `reporting_rule` | short reminder string |
 
 ### Status codes
 
-| Code | Meaning |
-|---|---|
-| 200 | Success |
-| 422 | Validation error |
-| 500 | Crawl / analyst / pipeline failure |
+`422` bad input / no evidence · `500` crawl or judge failure

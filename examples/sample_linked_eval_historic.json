@@ -1,0 +1,532 @@
+{
+  "answer_file": "examples\\sample_answer_historic.txt",
+  "model": "llama3.1",
+  "judge_runs": 1,
+  "url_pool": [
+    "https://www.vacationstravel.com/tripadvisor/",
+    "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+    "https://esim.holafly.com/inside/market-reports/most-loved-and-complained-about-landmarks/",
+    "https://www.thecollector.com/must-see-ancient-monuments/",
+    "https://sapiro.app/en/blog/most-visited-monuments-world/",
+    "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+  ],
+  "caveats": [
+    "mean_groundedness is the primary authority-agnostic result.",
+    "mean_trust_index mixes Open PageRank popularity with support; do not treat as pure truth.",
+    "Ternary F1 from other scripts is secondary; prefer MAE/RMSE on continuous scores.",
+    "Claim\u2192URL pairs include url_match_note after token-overlap validation."
+  ],
+  "summary": {
+    "claim_count": 14,
+    "scored_count": 14,
+    "mean_groundedness": 0.764,
+    "mean_authority": 1.032,
+    "mean_trust_index": 0.767,
+    "min_groundedness": 0.0,
+    "max_groundedness": 0.9
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "statement": "There is no single, universally accepted 'best historic site' rating.",
+      "urls": [
+        "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+      ],
+      "url_match_note": "reassigned_overlap (was https://www.vacationstravel.com/tripadvisor/)",
+      "url_overlap": 0.167,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.93,
+      "trust_index": 0.83,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "domain": "engagingplaces.net",
+          "authority_multiplier": 0.925
+        }
+      ],
+      "analyst_reasoning": "Claim: There is no single, universally accepted 'best historic site' rating. -> SUPPORT: 0.90 because The Heritage Foundation's guide grades historic places from A to C for \"accuracy\" and \"ideological bias\", implying that there is no universally accepted rating system.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 12.93
+    },
+    {
+      "id": "C02",
+      "statement": "Different organizations publish their own lists, and each has its own methodology and biases.",
+      "urls": [
+        "https://www.vacationstravel.com/tripadvisor/"
+      ],
+      "url_match_note": "low_overlap_kept_llm",
+      "url_overlap": 0.0,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.99,
+      "trust_index": 0.89,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://www.vacationstravel.com/tripadvisor/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://www.vacationstravel.com/tripadvisor/",
+          "domain": "vacationstravel.com",
+          "authority_multiplier": 0.992
+        }
+      ],
+      "analyst_reasoning": "Claim: Different organizations publish their own lists, and each has its own methodology and biases. -> SUPPORT: 0.90 because The source documents show multiple categories and subcategories, indicating that different organizations publish their own lists.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 11.54
+    },
+    {
+      "id": "C03",
+      "statement": "Tripadvisor Travelers' Choice (global attractions) rankings are based on user reviews and ratings over a 12-month period.",
+      "urls": [
+        "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions"
+      ],
+      "url_match_note": "llm_ok",
+      "url_overlap": 0.308,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.23,
+      "trust_index": 1.0,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+          "domain": "tripadvisor.mediaroom.com",
+          "authority_multiplier": 1.227
+        }
+      ],
+      "analyst_reasoning": "Claim: Tripadvisor Travelers' Choice (global attractions) rankings are based on user reviews and ratings over a 12-month period. -> SUPPORT: 0.90 because The statement is supported by the source, which states \"From iconic NYC landmarks to hidden gem national parks, Tripadvisor's annual awards highlight top-rated experiences and attractions globally, featuring standout winners like Central Park Pedicab Tour and The Unvanquished Tour in Porto City Center\".\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 11.17
+    },
+    {
+      "id": "C04",
+      "statement": "Tripadvisor Travelers' Choice (global attractions) rankings reflect popularity and traveler satisfaction more than scholarly 'historical importance'.",
+      "urls": [
+        "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions"
+      ],
+      "url_match_note": "llm_ok",
+      "url_overlap": 0.267,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.23,
+      "trust_index": 1.0,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+          "domain": "tripadvisor.mediaroom.com",
+          "authority_multiplier": 1.227
+        }
+      ],
+      "analyst_reasoning": "Claim: Tripadvisor Travelers' Choice rankings reflect popularity and traveler satisfaction more than scholarly 'historical importance' -> SUPPORT: 0.90 because The article states that Tripadvisor's annual awards \"highlight top-rated experiences and attractions globally, featuring standout winners like Central Park Pedicab Tour and The Unvanquished Tour in Porto City Center\", indicating that the rankings prioritize popularity and traveler satisfaction.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 8.12
+    },
+    {
+      "id": "C05",
+      "statement": "UNESCO does not rank sites as 'best'; it designates places as having Outstanding Universal Value.",
+      "urls": [
+        "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+      ],
+      "url_match_note": "reassigned_overlap (was https://www.thecollector.com/must-see-ancient-monuments/)",
+      "url_overlap": 0.091,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.93,
+      "trust_index": 0.83,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "domain": "engagingplaces.net",
+          "authority_multiplier": 0.925
+        }
+      ],
+      "analyst_reasoning": "Claim: UNESCO does not rank sites as 'best'; it designates places as having Outstanding Universal Value. -> SUPPORT: 0.90 because The Heritage Foundation's guide grades historic places from A to C for \"accuracy\" and \"ideological bias\", which is different from UNESCO's designation process.\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 5.76
+    },
+    {
+      "id": "C06",
+      "statement": "UNESCO-listed sites like the Pyramids of Giza, Great Wall, Angkor Wat, Machu Picchu, etc., are widely regarded as top historic sites.",
+      "urls": [
+        "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+      ],
+      "url_match_note": "reassigned_overlap (was https://www.thecollector.com/must-see-ancient-monuments/)",
+      "url_overlap": 0.118,
+      "groundedness_score": 0.0,
+      "authority_multiplier": 0.93,
+      "trust_index": 0.0,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "domain": "engagingplaces.net",
+          "authority_multiplier": 0.925
+        }
+      ],
+      "analyst_reasoning": "Claim: UNESCO-listed sites like the Pyramids of Giza, Great Wall, Angkor Wat, Machu Picchu, etc., are widely regarded as top historic sites. -> SUPPORT: 0.00 because there is no mention of UNESCO-listed sites in the provided source document.\n\nGROUNDEDNESS: 0.00",
+      "latency_seconds": 5.41
+    },
+    {
+      "id": "C07",
+      "statement": "Media / blog 'best of' lists are editorial choices, not formal ratings.",
+      "urls": [
+        "https://sapiro.app/en/blog/most-visited-monuments-world/"
+      ],
+      "url_match_note": "llm_ok",
+      "url_overlap": 0.125,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.0,
+      "trust_index": 0.9,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://sapiro.app/en/blog/most-visited-monuments-world/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://sapiro.app/en/blog/most-visited-monuments-world/",
+          "domain": "sapiro.app",
+          "authority_multiplier": 1.0
+        }
+      ],
+      "analyst_reasoning": "Claim: Media / blog 'best of' lists are not formal ratings -> SUPPORT: 0.90 because the source explicitly states that \"Ask which monument draws the biggest crowds on the planet and most people will say the Eiffel Tower. A reasonable guess, but wrong.\"\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 10.19
+    },
+    {
+      "id": "C08",
+      "statement": "Tripadvisor / review-based ratings are biased toward popularity, accessibility, and cultural factors.",
+      "urls": [
+        "https://www.vacationstravel.com/tripadvisor/"
+      ],
+      "url_match_note": "llm_ok",
+      "url_overlap": 0.1,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.99,
+      "trust_index": 0.89,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://www.vacationstravel.com/tripadvisor/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://www.vacationstravel.com/tripadvisor/",
+          "domain": "vacationstravel.com",
+          "authority_multiplier": 0.992
+        }
+      ],
+      "analyst_reasoning": "Claim: Tripadvisor / review-based ratings are biased toward popularity, accessibility, and cultural factors. -> SUPPORT: 0.90 because The website has categories for destinations, including Australia, New Zealand, and Europe, which suggests that the ratings may be influenced by cultural factors.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 5.36
+    },
+    {
+      "id": "C09",
+      "statement": "Sentiment studies measure emotional impact and satisfaction, not historical accuracy or significance.",
+      "urls": [
+        "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+      ],
+      "url_match_note": "reassigned_overlap (was https://esim.holafly.com/inside/market-reports/most-loved-and-complained-about-landmarks/)",
+      "url_overlap": 0.1,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.93,
+      "trust_index": 0.83,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "domain": "engagingplaces.net",
+          "authority_multiplier": 0.925
+        }
+      ],
+      "analyst_reasoning": "Claim: Sentiment studies do not measure historical accuracy or significance -> SUPPORT: 0.90 because The Heritage Foundation's Historic Sites Guide grades historic places from A to C for \"accuracy\" and \"ideological bias\", which implies that accuracy is being measured, but the guide's own methodology and ideological flaws suggest that this measurement is not objective.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 6.15
+    },
+    {
+      "id": "C10",
+      "statement": "UNESCO designation is less 'consumer' biased but still shaped by politics and capacity.",
+      "urls": [
+        "https://www.thecollector.com/must-see-ancient-monuments/"
+      ],
+      "url_match_note": "low_overlap_kept_llm",
+      "url_overlap": 0.0,
+      "groundedness_score": 0.4,
+      "authority_multiplier": 1.16,
+      "trust_index": 0.46,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://www.thecollector.com/must-see-ancient-monuments/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://www.thecollector.com/must-see-ancient-monuments/",
+          "domain": "thecollector.com",
+          "authority_multiplier": 1.159
+        }
+      ],
+      "analyst_reasoning": "Claim: UNESCO designation is less 'consumer' biased -> SUPPORT: 0.40 because the source does not mention anything about UNESCO designation being less 'consumer' biased, but it does mention that UNESCO designation is shaped by politics and capacity.\n\nGROUNDEDNESS: 0.40",
+      "latency_seconds": 8.68
+    },
+    {
+      "id": "C11",
+      "statement": "Ideological / interpretive bias is present in some guides, especially in the U.S.",
+      "urls": [
+        "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+      ],
+      "url_match_note": "low_overlap_kept_llm",
+      "url_overlap": 0.0,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.93,
+      "trust_index": 0.83,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "domain": "engagingplaces.net",
+          "authority_multiplier": 0.925
+        }
+      ],
+      "analyst_reasoning": "Claim: Ideological / interpretive bias is present in some guides, especially in the U.S. -> SUPPORT: 0.90 because The Heritage Foundation's Historic Sites Guide grades historic places from A to C for \"accuracy\" and \"ideological bias\", indicating a clear attempt to impose ideological views on historical sites.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 6.15
+    },
+    {
+      "id": "C12",
+      "statement": "There is no objective sense of a 'best' historic site.",
+      "urls": [
+        "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/"
+      ],
+      "url_match_note": "reassigned_overlap (was https://www.vacationstravel.com/tripadvisor/)",
+      "url_overlap": 0.25,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.93,
+      "trust_index": 0.83,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://engagingplaces.net/2025/10/30/when-accuracy-means-ideology-a-closer-look-at-the-heritage-foundations-historic-sites-guide/",
+          "domain": "engagingplaces.net",
+          "authority_multiplier": 0.925
+        }
+      ],
+      "analyst_reasoning": "Claim: There is no objective sense of a 'best' historic site. -> SUPPORT: 0.90 because The Heritage Foundation's grading system is based on ideological bias, as stated in the article: \"The Heritage Foundation awards [James Madison\u2019s Montpelier] a C for historical accuracy, claiming the site shows a \u2018notable lack of focus on James Madison\u2019 and that: ...\".\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 6.6
+    },
+    {
+      "id": "C13",
+      "statement": "What you get depends on the question: most awarded by travelers, most visited, or most historically significant.",
+      "urls": [
+        "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+        "https://sapiro.app/en/blog/most-visited-monuments-world/"
+      ],
+      "url_match_note": "reassigned_overlap (was https://www.vacationstravel.com/tripadvisor/)",
+      "url_overlap": 0.1,
+      "groundedness_score": 0.4,
+      "authority_multiplier": 1.11,
+      "trust_index": 0.45,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        },
+        {
+          "url": "https://sapiro.app/en/blog/most-visited-monuments-world/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://tripadvisor.mediaroom.com/2026-04-28-Tripadvisor-Announces-2026-Travelers-Choice-Awards-Best-of-the-Best-Things-to-Do,-Recognizing-the-Worlds-Most-Loved-Travel-Experiences-and-Attractions",
+          "domain": "tripadvisor.mediaroom.com",
+          "authority_multiplier": 1.227
+        },
+        {
+          "url": "https://sapiro.app/en/blog/most-visited-monuments-world/",
+          "domain": "sapiro.app",
+          "authority_multiplier": 1.0
+        }
+      ],
+      "analyst_reasoning": "Claim: What you get depends on the question: most awarded by travelers, most visited, or most historically significant. -> SUPPORT: 0.40 because SOURCE DOCUMENT 1 lists \"Best of the Best Things to Do\" and SOURCE DOCUMENT 2 ranks the most visited monuments, but does not directly address historical significance.\n\nGROUNDEDNESS: 0.40",
+      "latency_seconds": 8.28
+    },
+    {
+      "id": "C14",
+      "statement": "The Pyramids of Giza, Mesopotamian sites, Rome/Colosseum & Forum, Athens/Acropolis, Angkor, Machu Picchu, Petra, etc., are often considered most historically significant.",
+      "urls": [
+        "https://www.thecollector.com/must-see-ancient-monuments/"
+      ],
+      "url_match_note": "low_overlap_kept_llm",
+      "url_overlap": 0.0,
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.16,
+      "trust_index": 1.0,
+      "evidence_quality": 1.0,
+      "evidence": [
+        {
+          "url": "https://www.thecollector.com/must-see-ancient-monuments/",
+          "source": "live",
+          "char_count": 3000,
+          "usable": true
+        }
+      ],
+      "judge_std": null,
+      "notes": [
+        "groundedness_score is authority-agnostic; prefer it over trust_index for factual support.",
+        "authority_multiplier / trust_index use Open PageRank popularity, not correctness."
+      ],
+      "per_url_authority": [
+        {
+          "url": "https://www.thecollector.com/must-see-ancient-monuments/",
+          "domain": "thecollector.com",
+          "authority_multiplier": 1.159
+        }
+      ],
+      "analyst_reasoning": "Claim: The Pyramids of Giza, Mesopotamian sites, Rome/Colosseum & Forum, Athens/Acropolis, Angkor, Machu Picchu, Petra, etc., are often considered most historically significant. -> SUPPORT: 0.90 because TheCollector.com lists these sites as \"must-see ancient monuments\".\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 6.41
+    }
+  ]
+}

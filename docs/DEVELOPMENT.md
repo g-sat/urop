@@ -1,4 +1,4 @@
-# Development guide
+# Development
 
 ## Setup
 
@@ -8,62 +8,42 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-Minimum `.env`:
+`.env` at minimum:
 
 ```env
-OPR_API_KEY=opr_live_your_key_here
+OPR_API_KEY=...
 DEFAULT_ANALYST_MODEL=llama3.1
 ```
 
-Pull local models:
-
 ```powershell
 ollama pull llama3.1
-ollama pull phi3
 ```
 
-## Run the API
-
-From the repository root:
+## API
 
 ```powershell
 python -m linkground
 ```
 
-Or:
+If port 8000 is stuck:
 
 ```powershell
-uvicorn linkground.api.app:app --host 127.0.0.1 --port 8000
+Get-NetTCPConnection -LocalPort 8000 | Select OwningProcess
+Stop-Process -Id <pid> -Force
 ```
 
-## Scripts
-
-| Command | Purpose |
-|---|---|
-| `python scripts/build_dataset.py` | Write `data/evaluation_dataset.json` |
-| `python scripts/run_benchmark.py` | Benchmark `/v1/evaluate` → `results/benchmark_metrics.csv` |
-| `python scripts/generate_report.py` | Metrics report + plots under `results/` |
-| `python scripts/evaluate_linked_answer.py ...` | Auto claim→link evaluation for arbitrary answers |
-
-### Claim-linked evaluation example
+## Common commands
 
 ```powershell
-python scripts/evaluate_linked_answer.py `
-  --answer-file examples/sample_answer.txt `
-  --urls-file examples/url_pool.txt `
-  --output examples/sample_linked_eval.json
+python scripts/run_lcse_suite.py --spine all
+python scripts/evaluate_linked_answer.py --answer-file examples/sample_answer.txt --urls-file examples/url_pool.txt
+python scripts/run_benchmark.py
+python scripts/generate_report.py
 ```
 
 ## Conventions
 
-- Keep service logic out of route handlers.
-- Prefer clear names (`groundedness_score`, `trust_index`, `authority_multiplier`).
-- Network failures in authority/crawl paths should degrade gracefully.
-- Do not commit `.env`, `.cache/`, or `env/`.
-- Generated files under `results/` are gitignored; keep the folder with `.gitkeep`.
-
-## Project layout reminder
-
-Active runtime: `linkground/` + `scripts/` + `examples/`  
-Data: `data/evaluation_dataset.json`  
-Docs: `docs/`
+- Business logic lives in `services/`, not route handlers.
+- Support stays the primary field name (`groundedness_score`).
+- Don’t add silent prestige into the primary score.
+- Results go under `results/`; datasets under `data/` / `data/lcse/`.
