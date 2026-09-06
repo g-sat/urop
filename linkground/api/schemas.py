@@ -68,4 +68,7 @@ class EvaluateResponse(BaseModel):
     model_used: str
     claim_count: int
     notes: List[str] = Field(default_factory=list)
-    research: dict = Field(default_factory=dict, description="LCSE block: support, prestige, flags")
+    research: dict = Field(
+        default_factory=dict,
+        description="support, prestige, inflation, source, flags",
+    )

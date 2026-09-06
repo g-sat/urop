@@ -1,50 +1,37 @@
-# Research notes (LCSE)
+# Research notes
 
-LCSE = link-conditioned support estimation.
+Link-conditioned support estimation: score a claim against pages you can crawl, keep prestige separate, and run a few checks that catch common mixups.
 
-When people score LLM answers “with sources,” they often fold PageRank or a trusted-site list into the same number as textual support. This project keeps those apart and ships a small suite that tries to break the mixups.
+## What we measure
 
-## Setup
+1. Textual support (`groundedness_score`)
+2. OPR prestige (`authority_multiplier`) — popularity, not truth
+3. Whether the *cited* URL actually backs the claim (swaps)
+4. When discovery / allowlist filled in for missing cites
 
-1. Score against retrieved page text (`groundedness_score`).
-2. Report OPR prestige separately (`authority_multiplier`).
-3. Run citation swaps.
-4. Flag discovery / allowlist use.
+`research.inflation = max(0, trust - support)`.  
+`research.flags` / `research.source` tag discovery and discounts.
 
-## Spine A — prestige confound
+## Suite files
 
-Cells: supported/unsupported × high/low prestige.
+| File | What |
+|---|---|
+| `data/lcse/confound_grid.jsonl` | supported/unsupported × high/low prestige |
+| `data/lcse/citation_swap.jsonl` | same claim, matched vs swapped URL |
+| `data/lcse/ethics_audit.jsonl` | caller cites vs discovery |
 
-Compare `trust_index` to `groundedness_score`.  
-`research.prestige_inflation = max(0, trust - support)`.
-
-Note: support `0` forces trust `0`, so UH cases that are total contradictions will not show inflation. Prefer pages that are on-topic but do not actually support the claim.
-
-Data: `data/lcse/confound_grid.jsonl`
-
-## Spine B — citation attribution
-
-Paired rows: same statement, correct URL vs wrong URL.  
-`delta_swap = matched_support - swapped_support` should be clearly positive.
-
-Data: `data/lcse/citation_swap.jsonl`
-
-## Spine C — allowlist / discovery
-
-Same statement with caller URLs vs discovery.  
-Check `research.ethics_flags` and that writeups still lead with support.
-
-Data: `data/lcse/ethics_audit.jsonl`
+Hard-zero support forces trust to zero, so prestige inflation only shows when support is partial. Prefer on-topic-but-wrong pages for the unsupported/high-prestige cells.
 
 ## Run
 
 ```powershell
 python -m linkground
-python scripts/run_lcse_suite.py --spine all
+python scripts/run_lcse_suite.py
+# --only confound|swaps|ethics
 ```
 
 Writes `results/lcse_suite.json`.
 
 ## Scope
 
-Not a world-truth oracle. Not “OPR means reliable.” Discovery will miss niches outside the allowlist. The point is a scoring protocol you can audit.
+Not a world-truth oracle. Discovery misses niches outside the allowlist. The point is an auditable scoring protocol.

@@ -34,7 +34,7 @@ trust_index        = groundedness × mean prestige (capped at 1)
 
 | Script | Role |
 |---|---|
-| `run_lcse_suite.py` | spines A/B/C |
+| `run_lcse_suite.py` | suite runner |
 | `evaluate_linked_answer.py` | split answer → URLs → score |
 | `run_benchmark.py` | older dataset loop |
 | `generate_report.py` | MAE/RMSE plots |

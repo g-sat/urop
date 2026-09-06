@@ -12,7 +12,10 @@ Support (`groundedness_score`) and prestige (`authority_multiplier`, from Open P
 | `authority_multiplier` | mean OPR prestige |
 | `trust_index` | support × prestige |
 | `discovery_weight` | `< 1` when evidence was auto-found |
-| `research` | LCSE extras (inflation, citation path, ethics flags) |
+| `research.support` / `prestige` | copies of the main scores |
+| `research.inflation` | max(0, trust − support) |
+| `research.source` | cited / discovered / mixed |
+| `research.flags` | discovery / discount tags |
 
 Version `3.0.0`.
 
@@ -20,7 +23,7 @@ Version `3.0.0`.
 
 ```text
 linkground/     FastAPI + services
-data/lcse/      Spine A/B/C JSONL
+data/lcse/      eval suite JSONL
 scripts/        suite, linked-eval, benchmark
 examples/       sample answers + URL pools
 docs/
@@ -55,16 +58,11 @@ curl -X POST http://127.0.0.1:8000/v1/evaluate `
 ## Experiments
 
 ```powershell
-python scripts/run_lcse_suite.py --spine all
+python scripts/run_lcse_suite.py
+# optional: --only confound|swaps|ethics
 ```
 
-| Spine | Data | Checks |
-|---|---|---|
-| A | `data/lcse/confound_grid.jsonl` | prestige vs support |
-| B | `data/lcse/citation_swap.jsonl` | matched vs swapped URLs |
-| C | `data/lcse/ethics_audit.jsonl` | discovery flags / allowlist |
-
-See `docs/RESEARCH.md`.
+Suite files live in `data/lcse/`. Notes in `docs/RESEARCH.md`.
 
 ## Long answers
 

@@ -45,10 +45,6 @@ async def fetch_authority_multipliers(urls: List[str]) -> List[float]:
                         else:
                             _memory_ranks[name] = rank_to_multiplier(raw_rank)
                     cache_store.save_opr_cache(_memory_ranks)
-                else:
-                    print(f'[authority] Open PageRank HTTP {response.status_code}: {response.text[:200]!r}')
-            except Exception as exc:
-                print(f'[authority] Open PageRank request failed: {exc}')
-    elif missing and (not OPR_API_KEY):
-        print('[authority] OPR_API_KEY is not set; using baseline multiplier 1.0')
+            except Exception:
+                pass
     return [_resolve_cached(domain, _memory_ranks) for domain in domains]

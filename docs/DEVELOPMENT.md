@@ -35,7 +35,7 @@ Stop-Process -Id <pid> -Force
 ## Common commands
 
 ```powershell
-python scripts/run_lcse_suite.py --spine all
+python scripts/run_lcse_suite.py
 python scripts/evaluate_linked_answer.py --answer-file examples/sample_answer.txt --urls-file examples/url_pool.txt
 python scripts/run_benchmark.py
 python scripts/generate_report.py

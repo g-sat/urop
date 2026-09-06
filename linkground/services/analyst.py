@@ -25,8 +25,10 @@ async def _single_pass(source_context: str, statement: str, claim_count: int, an
     prompt = build_user_prompt(source_context, statement, claim_count)
     reasoning = await _chat(analyst_model, prompt)
     if not has_parseable_score(reasoning):
-        print('[analyst] format miss; retrying once')
-        retry_prompt = prompt + '\n\n[STRICT REMINDER]\nYour previous answer was invalid. Reply with ONLY the claim line(s) and GROUNDEDNESS: 0.XX. No other text.'
+        retry_prompt = (
+            prompt
+            + "\n\nReply with ONLY the claim line(s) and GROUNDEDNESS: 0.XX."
+        )
         reasoning = await _chat(analyst_model, retry_prompt)
     groundedness = parse_groundedness(reasoning, expected_claims=claim_count)
     return (groundedness, reasoning)

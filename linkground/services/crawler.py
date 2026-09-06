@@ -36,7 +36,6 @@ async def _fetch_page(crawler: AsyncWebCrawler, url: str) -> EvidenceDocument:
         text = result.markdown[:context_char_budget(url)]
         source = 'live'
     else:
-        print(f'[crawler] weak/empty crawl for {url}; using evidence fallback')
         text = '[LINKGROUND_FALLBACK]\n' + fallback_text_for_url(url)
         source = 'fallback'
     if source == 'live':

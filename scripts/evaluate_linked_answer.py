@@ -78,21 +78,16 @@ def validate_and_reassign_urls(statement: str, assigned: list[str], url_pool: li
         elif best_pool_score < 0.35 and hint_best == 0 and (specific_best < min_overlap):
             keep_llm = True
     if keep_llm and assigned:
-        note = 'llm_ok'
-        if best_pool_score > best_assigned and (specific_best <= specific_assigned or hint_best == 0):
-            note = 'llm_kept_reject_generic_reassign'
-        return (assigned[:2], note)
+        return assigned[:2], "kept"
     if best_pool_score >= 0.35 or specific_best >= min_overlap or hint_best > 0:
         chosen = [url for score, url in pool_scored if score >= 0.35 or _hint_score(statement, url) > 0][:2]
         if not chosen:
             chosen = [best_pool_url]
-        note = 'reassigned_overlap'
-        if assigned and assigned[0] != chosen[0]:
-            note = f'reassigned_overlap (was {assigned[0]})'
-        return (chosen, note)
+        note = "reassigned"
+        return chosen, note
     if assigned:
-        return (assigned[:2], 'low_overlap_kept_llm')
-    return ([url_pool[0]], 'fallback_first_url')
+        return assigned[:2], "weak"
+    return [url_pool[0]], "fallback"
 
 def normalize_url(url: str) -> str:
     cleaned = url.strip().rstrip('.,);]')
@@ -233,21 +228,17 @@ def score_claim(api_url: str, statement: str, urls: list[str], model: str, judge
     return {'groundedness_score': body.get('groundedness_score'), 'authority_multiplier': body.get('authority_multiplier'), 'trust_index': body.get('trust_index'), 'evidence_quality': body.get('evidence_quality'), 'evidence_mode': body.get('evidence_mode'), 'discovery_weight': body.get('discovery_weight'), 'discovered_urls': body.get('discovered_urls', []), 'evidence': body.get('evidence', []), 'judge_std': body.get('judge_std'), 'notes': body.get('notes', []), 'per_url_authority': body.get('per_url_authority', []), 'analyst_reasoning': body.get('analyst_reasoning', ''), 'latency_seconds': latency, 'used_discovery': use_discovery}
 
 def claim_needs_discovery(claim: dict[str, Any]) -> bool:
-    note = str(claim.get('url_match_note') or '')
-    overlap = claim.get('url_overlap')
-    if note.startswith('reassigned_overlap'):
-        return False
-    if note.startswith('llm_kept_reject_generic_reassign'):
-        return False
-    if note in {'low_overlap_kept_llm', 'fallback_first_url', 'empty_pool'}:
-        return True
-    if note.startswith('llm_ok'):
+    note = str(claim.get("url_match_note") or "")
+    overlap = claim.get("url_overlap")
+    if note.startswith("reassigned") or note == "kept":
+        if note.startswith("reassigned"):
+            return False
         return isinstance(overlap, (int, float)) and overlap < 0.08
+    if note in {"weak", "fallback", "empty_pool"}:
+        return True
     if isinstance(overlap, (int, float)) and overlap < 0.08:
         return True
-    if not claim.get('urls'):
-        return True
-    return False
+    return not bool(claim.get("urls"))
 
 def aggregate(rows: list[dict[str, Any]]) -> dict[str, Any]:
     scored = [row for row in rows if isinstance(row.get('groundedness_score'), (int, float))]
@@ -263,69 +254,82 @@ def aggregate(rows: list[dict[str, Any]]) -> dict[str, Any]:
     return summary
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Auto-split an LLM answer into claim→link pairs and evaluate via LinkGround.')
-    parser.add_argument('--answer-file', type=Path, required=True, help='Path to the LLM answer text')
-    parser.add_argument('--urls-file', type=Path, default=None, help='Optional newline-separated URL pool')
-    parser.add_argument('--url', action='append', default=[], help='Add a URL to the evidence pool')
-    parser.add_argument('--propose-urls', action='store_true', help='If the answer lacks URLs, ask Ollama to propose candidate URLs for named sites')
-    parser.add_argument('--model', default='llama3.1', help='Ollama model for split/assign + LinkGround analyst')
-    parser.add_argument('--judge-runs', type=int, default=1, help='Repeat analyst scoring per claim for stability (passed to API)')
-    parser.add_argument('--api-url', default=DEFAULT_API)
-    parser.add_argument('--health-url', default=DEFAULT_HEALTH)
-    parser.add_argument('--ollama-url', default=DEFAULT_OLLAMA)
-    parser.add_argument('--output', type=Path, default=ROOT / 'results' / 'linked_answer_eval.json', help='Where to write the JSON report')
+    parser = argparse.ArgumentParser(description="Split an answer into claims, match URLs, score via LinkGround.")
+    parser.add_argument("--answer-file", type=Path, required=True)
+    parser.add_argument("--urls-file", type=Path, default=None)
+    parser.add_argument("--url", action="append", default=[])
+    parser.add_argument("--propose-urls", action="store_true")
+    parser.add_argument("--model", default="llama3.1")
+    parser.add_argument("--judge-runs", type=int, default=1)
+    parser.add_argument("--api-url", default=DEFAULT_API)
+    parser.add_argument("--health-url", default=DEFAULT_HEALTH)
+    parser.add_argument("--ollama-url", default=DEFAULT_OLLAMA)
+    parser.add_argument("--output", type=Path, default=ROOT / "results" / "linked_answer_eval.json")
     return parser.parse_args()
 
 def main() -> None:
     args = parse_args()
-    answer_text = args.answer_file.read_text(encoding='utf-8').strip()
+    answer_text = args.answer_file.read_text(encoding="utf-8").strip()
     if not answer_text:
-        raise SystemExit('Answer file is empty.')
+        raise SystemExit("empty answer file")
+
     try:
-        health = requests.get(args.health_url, timeout=5)
-        print(f'[linked-eval] API health: {health.json()}')
+        requests.get(args.health_url, timeout=5).raise_for_status()
     except Exception as exc:
-        raise SystemExit(f'LinkGround API not reachable at {args.health_url}: {exc}') from exc
+        raise SystemExit(f"API down: {exc}") from exc
+
     url_pool = load_url_pool(answer_text, args.url, args.urls_file)
     if args.propose_urls or not url_pool:
-        print('[linked-eval] proposing candidate URLs from named entities...')
-        proposed = propose_missing_urls(answer_text, args.model, args.ollama_url)
-        for url in proposed:
+        for url in propose_missing_urls(answer_text, args.model, args.ollama_url):
             if url not in url_pool:
                 url_pool.append(url)
     if not url_pool:
-        raise SystemExit('No URLs available. Pass --urls-file / --url, embed links in the answer, or use --propose-urls.')
-    print(f'[linked-eval] URL pool size: {len(url_pool)}')
-    for index, url in enumerate(url_pool):
-        print(f'  [{index}] {url}')
-    print('[linked-eval] splitting answer into claims and assigning URLs...')
+        raise SystemExit("no urls — pass --urls-file / --url or --propose-urls")
+
     claims = split_and_assign_claims(answer_text, url_pool, args.model, args.ollama_url)
     if not claims:
-        raise SystemExit('Model returned no claims.')
-    print(f'[linked-eval] claims: {len(claims)}')
+        raise SystemExit("no claims returned")
+
+    print(f"{len(claims)} claims, {len(url_pool)} urls")
     rows: list[dict[str, Any]] = []
-    for index, claim in enumerate(claims, start=1):
-        print(f"\n[linked-eval] {claim['id']} ({index}/{len(claims)})")
-        print(f"  statement: {claim['statement'][:120]}")
-        print(f"  urls: {claim['urls']} ({claim.get('url_match_note')})")
+    for i, claim in enumerate(claims, 1):
         use_discovery = claim_needs_discovery(claim)
-        if use_discovery:
-            print('  evidence: DISCOVERY (discounted weight; no reliable caller link)')
-        scored = score_claim(args.api_url, claim['statement'], claim['urls'], args.model, judge_runs=args.judge_runs, use_discovery=use_discovery)
+        scored = score_claim(
+            args.api_url,
+            claim["statement"],
+            claim["urls"],
+            args.model,
+            judge_runs=args.judge_runs,
+            use_discovery=use_discovery,
+        )
         row = {**claim, **scored}
         rows.append(row)
-        if 'error' in row:
-            print(f"  ERROR: {row['error']}")
+        if "error" in row:
+            print(f"[{i}/{len(claims)}] {claim['id']} fail")
         else:
-            print(f"  groundedness={row['groundedness_score']} (authority-agnostic) mode={row.get('evidence_mode')} disc_w={row.get('discovery_weight')} authority={row['authority_multiplier']} trust={row['trust_index']} evidence_q={row.get('evidence_quality')} latency={row['latency_seconds']}s")
+            tag = "disc" if use_discovery else "cite"
+            print(
+                f"[{i}/{len(claims)}] {claim['id']}  "
+                f"g={row['groundedness_score']}  "
+                f"t={row['trust_index']}  "
+                f"{tag}"
+            )
+
     summary = aggregate(rows)
-    report = {'answer_file': str(args.answer_file), 'model': args.model, 'judge_runs': args.judge_runs, 'url_pool': url_pool, 'caveats': ['mean_groundedness is the primary authority-agnostic result.', 'Caller-linked claims use full weight; discovery-backed claims use discovery_weight < 1.', 'mean_trust_index mixes Open PageRank popularity with support; do not treat as pure truth.', 'Ternary F1 from other scripts is secondary; prefer MAE/RMSE on continuous scores.', 'Claim→URL pairs include url_match_note after token-overlap validation.'], 'summary': summary, 'claims': rows}
+    report = {
+        "answer_file": str(args.answer_file),
+        "model": args.model,
+        "judge_runs": args.judge_runs,
+        "url_pool": url_pool,
+        "summary": summary,
+        "claims": rows,
+    }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2), encoding='utf-8')
-    print('\n' + '=' * 72)
-    print('AUTOMATED CLAIM->LINK EVALUATION SUMMARY')
-    print('=' * 72)
-    print(json.dumps(summary, indent=2))
-    print(f'\nWrote {args.output}')
+    args.output.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    print(
+        f"mean_g={summary.get('mean_groundedness')}  "
+        f"mean_t={summary.get('mean_trust_index')}  "
+        f"-> {args.output}"
+    )
 if __name__ == '__main__':
     main()

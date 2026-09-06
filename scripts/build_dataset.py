@@ -23,9 +23,6 @@ def main() -> None:
     dataset = build_dataset()
     with open(output_path, 'w', encoding='utf-8') as handle:
         json.dump(dataset, handle, indent=2)
-    n_true = sum((1 for item in dataset if item['expected_score'] == 1.0))
-    n_false = sum((1 for item in dataset if item['expected_score'] == 0.0))
-    n_partial = sum((1 for item in dataset if item['expected_score'] == 0.5))
-    print(f'Wrote {len(dataset)} cases to {output_path} (true={n_true}, false={n_false}, partial={n_partial})')
+    print(f"wrote {len(dataset)} -> {output_path}")
 if __name__ == '__main__':
     main()
