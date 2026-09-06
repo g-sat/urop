@@ -2,12 +2,16 @@
 .env
 .cache/
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 .pytest_cache/
 .mypy_cache/
 env/
 .venv/
 venv/
-results/*.png
-!.gitkeep
+*.egg-info/
+dist/
+build/
+
+# Generated artifacts (keep folder via .gitkeep)
+results/*
+!results/.gitkeep

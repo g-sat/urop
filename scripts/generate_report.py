@@ -23,7 +23,6 @@ from sklearn.metrics import (
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS_DIR = ROOT / "results"
 METRICS_CSV = RESULTS_DIR / "benchmark_metrics.csv"
-LEGACY_METRICS_CSV = RESULTS_DIR / "hardware_vs_accuracy_metrics.csv"
 REPORT_PATH = RESULTS_DIR / "metrics_report.txt"
 
 sns.set_theme(style="whitegrid")
@@ -39,27 +38,11 @@ def quantize_score(value: float) -> str:
 
 
 def load_metrics() -> pd.DataFrame:
-    path = METRICS_CSV if METRICS_CSV.exists() else LEGACY_METRICS_CSV
-    if not path.exists():
+    if not METRICS_CSV.exists():
         raise FileNotFoundError(
-            f"No metrics CSV found. Expected {METRICS_CSV} (run scripts/run_benchmark.py first)."
+            f"No metrics CSV found at {METRICS_CSV}. Run scripts/run_benchmark.py first."
         )
-
-    frame = pd.read_csv(path)
-
-    # Support both new and legacy column names
-    rename_map = {
-        "Model_Engine": "model",
-        "Statement": "statement",
-        "Actual_Truth": "expected_score",
-        "Predicted_Truth": "groundedness_score",
-        "Authority_Multiplier": "authority_multiplier",
-        "Final_Trust_Index": "trust_index",
-        "Latency_Seconds": "latency_seconds",
-        "Academic_Reasoning": "analyst_reasoning",
-    }
-    frame = frame.rename(columns={key: value for key, value in rename_map.items() if key in frame.columns})
-    return frame
+    return pd.read_csv(METRICS_CSV)
 
 
 def generate_report() -> None:

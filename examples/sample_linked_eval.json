@@ -1,0 +1,221 @@
+{
+  "answer_file": "scripts\\threejs_statement.txt",
+  "model": "llama3.1",
+  "url_pool": [
+    "https://threejs.org/",
+    "https://relicvault.app/",
+    "https://www.webdesignawards.io/nominees/relicvault-antique-identifier-know-what-you-ve-found",
+    "https://www.webdesignawards.io/nominees/casa-di-solare",
+    "https://www.webdesignawards.io/rankings/websites/three-js",
+    "https://www.merci-michel.com/projects/",
+    "https://www.webgpu.com/showcase/addictive-egg-hunt-game/",
+    "https://snp.agency/cases/the-quarry-house",
+    "https://orpetron.com/sites/the-quarry-house/",
+    "https://pilot.auto/",
+    "https://www.awwwards.com/websites/three-js/",
+    "https://landing.love/",
+    "https://webflow.com/made-in-webflow",
+    "https://docs.pmnd.rs/react-three-fiber/getting-started/introduction"
+  ],
+  "summary": {
+    "claim_count": 10,
+    "scored_count": 10,
+    "mean_groundedness": 0.818,
+    "mean_authority": 0.988,
+    "mean_trust_index": 0.79,
+    "min_groundedness": 0.0,
+    "max_groundedness": 0.99
+  },
+  "claims": [
+    {
+      "id": "C01",
+      "statement": "RelicVault is an interactive 'antique identifier' experience that uses 3D as the core UI, not just decoration.",
+      "urls": [
+        "https://relicvault.app/"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.82,
+      "trust_index": 0.74,
+      "per_url_authority": [
+        {
+          "url": "https://relicvault.app/",
+          "domain": "relicvault.app",
+          "authority_multiplier": 0.822
+        }
+      ],
+      "analyst_reasoning": "Claim: RelicVault uses 3D as the core UI, not just decoration. -> SUPPORT: 0.90 because The student statement is supported by the fact that the web app is described as using \"3D as the core UI, not just decoration\" in the SOURCE DOCUMENT 1.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 5.62
+    },
+    {
+      "id": "C02",
+      "statement": "Casa di Solare is a site-of-the-month winner on Web Design Awards, noted for high scores across design, UX, and performance.",
+      "urls": [
+        "https://www.webdesignawards.io/nominees/casa-di-solare"
+      ],
+      "groundedness_score": 0.99,
+      "authority_multiplier": 0.96,
+      "trust_index": 0.95,
+      "per_url_authority": [
+        {
+          "url": "https://www.webdesignawards.io/nominees/casa-di-solare",
+          "domain": "webdesignawards.io",
+          "authority_multiplier": 0.959
+        }
+      ],
+      "analyst_reasoning": "Claim: Casa di Solare is a site-of-the-month winner on Web Design Awards. -> SUPPORT: 0.99 because it is noted as \"Site of the Month\" on the Web Design Awards website.\nGROUNDEDNESS: 0.99",
+      "latency_seconds": 4.62
+    },
+    {
+      "id": "C03",
+      "statement": "Egg Hunt (Merci-Michel) is a playful, replayable browser game built with Three.js.",
+      "urls": [
+        "https://www.merci-michel.com/projects/"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.97,
+      "trust_index": 0.87,
+      "per_url_authority": [
+        {
+          "url": "https://www.merci-michel.com/projects/",
+          "domain": "merci-michel.com",
+          "authority_multiplier": 0.968
+        }
+      ],
+      "analyst_reasoning": "Claim: Egg Hunt (Merci-Michel) is a browser game. -> SUPPORT: 0.90 because it is built with Three.js, which is a library for browser-based applications.\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 3.79
+    },
+    {
+      "id": "C04",
+      "statement": "The Quarry House is often appears in 'exceptional Three.js' lists for cinematic camera moves and environment design.",
+      "urls": [
+        "https://snp.agency/cases/the-quarry-house"
+      ],
+      "groundedness_score": 0.0,
+      "authority_multiplier": 0.96,
+      "trust_index": 0.0,
+      "per_url_authority": [
+        {
+          "url": "https://snp.agency/cases/the-quarry-house",
+          "domain": "snp.agency",
+          "authority_multiplier": 0.961
+        }
+      ],
+      "analyst_reasoning": "Claim: The Quarry House is often appears in 'exceptional Three.js' lists for cinematic camera moves and environment design. -> SUPPORT: 0.00 because there is no mention of \"exceptional Three.js\" lists in the provided source documents.\nGROUNDEDNESS: 0.00",
+      "latency_seconds": 4.42
+    },
+    {
+      "id": "C05",
+      "statement": "Pilot.Auto showcases product/tech visualization with 3D scenes tied to scroll and interaction.",
+      "urls": [
+        "https://pilot.auto/"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.92,
+      "trust_index": 0.83,
+      "per_url_authority": [
+        {
+          "url": "https://pilot.auto/",
+          "domain": "pilot.auto",
+          "authority_multiplier": 0.92
+        }
+      ],
+      "analyst_reasoning": "Claim: Pilot.Auto showcases product/tech visualization with 3D scenes tied to scroll and interaction. -> SUPPORT: 0.90 because The website uses 3D scenes and mentions product/tech visualization in the context of scroll and interaction.\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 4.72
+    },
+    {
+      "id": "C06",
+      "statement": "RelicVault and Casa di Solare balance visual ambition with solid UX and performance.",
+      "urls": [
+        "https://relicvault.app/"
+      ],
+      "groundedness_score": 0.89,
+      "authority_multiplier": 0.82,
+      "trust_index": 0.73,
+      "per_url_authority": [
+        {
+          "url": "https://relicvault.app/",
+          "domain": "relicvault.app",
+          "authority_multiplier": 0.822
+        }
+      ],
+      "analyst_reasoning": "Claim: RelicVault balances visual ambition with solid UX and performance. -> SUPPORT: 0.89 because \"RelicVault and Casa di Solare balance visual ambition with solid UX and performance.\" (Student Statement)\n\nGROUNDEDNESS: 0.89",
+      "latency_seconds": 4.58
+    },
+    {
+      "id": "C07",
+      "statement": "Webflow Three.js showcase has hundreds of live Three.js sites with filters.",
+      "urls": [
+        "https://webflow.com/made-in-webflow"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.24,
+      "trust_index": 1.0,
+      "per_url_authority": [
+        {
+          "url": "https://webflow.com/made-in-webflow",
+          "domain": "webflow.com",
+          "authority_multiplier": 1.244
+        }
+      ],
+      "analyst_reasoning": "Claim: Webflow has a showcase with hundreds of live Three.js sites with filters. -> SUPPORT: 0.90 because [Made in Webflow](https://webflow.com/made-in-webflow) page lists various categories, including \"Animation\" and \"Interactions\", which implies a large collection of Three.js sites.\n\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 5.56
+    },
+    {
+      "id": "C08",
+      "statement": "Awwwards has Three.js websites, including award-nominated and winning sites.",
+      "urls": [
+        "https://www.awwwards.com/websites/three-js/"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.21,
+      "trust_index": 1.0,
+      "per_url_authority": [
+        {
+          "url": "https://www.awwwards.com/websites/three-js/",
+          "domain": "awwwards.com",
+          "authority_multiplier": 1.214
+        }
+      ],
+      "analyst_reasoning": "Claim: Awwwards has Three.js websites -> SUPPORT: 0.90 because The Creative Pass page lists Three.js as one of the technologies used in award-nominated and winning sites.\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 4.17
+    },
+    {
+      "id": "C09",
+      "statement": "Web Design Awards has Three.js rankings, ranked by overall judging score.",
+      "urls": [
+        "https://www.webdesignawards.io/rankings/websites/three-js"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 0.96,
+      "trust_index": 0.86,
+      "per_url_authority": [
+        {
+          "url": "https://www.webdesignawards.io/rankings/websites/three-js",
+          "domain": "webdesignawards.io",
+          "authority_multiplier": 0.959
+        }
+      ],
+      "analyst_reasoning": "Claim: Web Design Awards has Three.js rankings, ranked by overall judging score. -> SUPPORT: 0.90 because The website explicitly states \"Every nominated site built on Three.js, ordered by the overall score our judging panel gave it.\"\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 5.05
+    },
+    {
+      "id": "C10",
+      "statement": "Landing.love has a ThreeJS collection with 74 sites recorded end-to-end.",
+      "urls": [
+        "https://landing.love/"
+      ],
+      "groundedness_score": 0.9,
+      "authority_multiplier": 1.02,
+      "trust_index": 0.92,
+      "per_url_authority": [
+        {
+          "url": "https://landing.love/",
+          "domain": "landing.love",
+          "authority_multiplier": 1.02
+        }
+      ],
+      "analyst_reasoning": "Claim: Landing.love has a ThreeJS collection with 74 sites recorded end-to-end. -> SUPPORT: 0.90 because the student statement is paraphrased in the \"Websites\" section of the source document, which lists various categories, including \"3D Website\" with 565 sites.\nGROUNDEDNESS: 0.90",
+      "latency_seconds": 5.31
+    }
+  ]
+}

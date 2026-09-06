@@ -7,8 +7,8 @@ from fastapi import APIRouter, HTTPException
 from linkground import __version__
 from linkground.api.schemas import EvaluateRequest, EvaluateResponse, UrlAuthority
 from linkground.config import CACHE_DIR
-from linkground.services.authority import fetch_authority_multipliers, normalize_domain
 from linkground.services.analyst import score_statement
+from linkground.services.authority import fetch_authority_multipliers, normalize_domain
 from linkground.services.crawler import aggregate_source_context
 from linkground.services.scoring import infer_claim_count, strip_discourse_prefix
 
@@ -25,12 +25,13 @@ async def health() -> dict:
     }
 
 
-@router.post("/v2/evaluate-provenance", response_model=EvaluateResponse)
-async def evaluate_provenance(payload: EvaluateRequest) -> EvaluateResponse:
+@router.post("/v1/evaluate", response_model=EvaluateResponse)
+@router.post("/v2/evaluate-provenance", response_model=EvaluateResponse, include_in_schema=False)
+async def evaluate(payload: EvaluateRequest) -> EvaluateResponse:
     """
     Measure an LLM statement using linked sources.
 
-    Steps:
+    Pipeline:
       1. Resolve Open PageRank authority for each URL
       2. Crawl and aggregate page evidence
       3. Score continuous groundedness with a local analyst model
@@ -64,12 +65,12 @@ async def evaluate_provenance(payload: EvaluateRequest) -> EvaluateResponse:
 
         return EvaluateResponse(
             groundedness_score=groundedness,
-            source_authority_multiplier=round(mean_authority, 2),
-            final_verified_trust_index=trust_index,
-            academic_reasoning=reasoning,
+            authority_multiplier=round(mean_authority, 2),
+            trust_index=trust_index,
+            analyst_reasoning=reasoning,
             per_url_authority=per_url,
             model_used=model_name,
-            claim_count_expected=claim_count,
+            claim_count=claim_count,
         )
     except HTTPException:
         raise

@@ -1,0 +1,40 @@
+There isn't a single "best" Three.js website—it depends on what you value (design, performance, interactivity, or learning). That said, here are some of the most consistently praised Three.js sites and galleries you can use as benchmarks or inspiration:
+
+Standout Three.js websites (2025–2026)
+These are frequently cited in curated lists and award sites for pushing the library's limits while staying usable:
+
+RelicVault – An interactive "antique identifier" experience that uses 3D as the core UI, not just decoration. It's often highlighted for strong storytelling + performance.
+
+Casa di Solare – A site-of-the-month winner on Web Design Awards, noted for high scores across design, UX, and performance.
+
+Egg Hunt (Merci-Michel) – A playful, replayable browser game built with Three.js; great example of lightweight, fun interactivity.
+
+The Quarry House – Often appears in "exceptional Three.js" lists for cinematic camera moves and environment design.
+
+Pilot.Auto – Showcases product/tech visualization with 3D scenes tied to scroll and interaction, useful if you're thinking about SaaS or product marketing.
+
+If you want a single "reference-quality" site to study end-to-end, RelicVault and Casa di Solare are strong picks because they balance visual ambition with solid UX and performance.
+
+Best galleries to browse Three.js sites
+Instead of one "best" site, these collections are more useful for ongoing inspiration and pattern mining:
+
+Webflow Three.js showcase – Hundreds of live Three.js sites with filters; good for volume and variety.
+
+Awwwards – Three.js websites – Award-nominated and winning sites; useful if you care about design excellence and trends.
+
+Web Design Awards – Three.js rankings – Ranked by overall judging score (design, UX, performance, accessibility); great for quality-over-quantity.
+
+Landing.love – ThreeJS collection – 74 sites recorded end-to-end so you can see real scroll-linked animations and camera moves.
+
+Utsubo's "Best Three.js Websites 2026" – Small, curated list with notes on techniques (WebGPU/TSL shaders, scroll-driven scenes, product renders).
+
+How to choose what's "best" for you
+Since you're into AI/ML and building apps, you might care about:
+
+Performance patterns: Look for sites that stay smooth on mid-range laptops (check frame rate, loading time, asset size).
+
+Interaction model: Scroll-driven narratives vs. navigable 3D worlds vs. product viewers. Pick the pattern that fits your use case (e.g., explaining a model, visualizing medical data, or a portfolio).
+
+Tech stack: Many top sites use React Three Fiber + Drei on top of Three.js; if you're planning a React-based frontend, prioritize those examples.
+
+If you tell me your goal (portfolio, product landing page, data viz, or something game-like), I can narrow this to 2–3 specific sites plus the exact techniques to copy.

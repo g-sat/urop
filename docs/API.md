@@ -5,30 +5,28 @@ OpenAPI UI: `/docs`
 
 ## `GET /health`
 
-Liveness check.
-
 ```json
 {
   "status": "ok",
   "service": "linkground",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "cache_dir": ".../.cache"
 }
 ```
 
-## `POST /v2/evaluate-provenance`
+## `POST /v1/evaluate`
 
 Measure an LLM statement against linked sources.
 
-### Request body
+Legacy alias (still accepted, not shown in schema): `POST /v2/evaluate-provenance`
+
+### Request
 
 | Field | Type | Required | Description |
 |---|---|---|---|
 | `urls` | `string[]` | yes | Evidence links |
-| `llm_output_to_test` | `string` | yes | Statement to measure (alias: `statement`) |
+| `statement` | `string` | yes | Statement to measure (also accepts `llm_output_to_test`) |
 | `model` | `string` | no | Ollama analyst model (default `llama3.1`) |
-
-Example:
 
 ```json
 {
@@ -36,22 +34,22 @@ Example:
     "https://en.wikipedia.org/wiki/Bitcoin",
     "https://bitcoin.org/bitcoin.pdf"
   ],
-  "llm_output_to_test": "Satoshi Nakamoto authored the Bitcoin whitepaper.",
+  "statement": "Satoshi Nakamoto authored the Bitcoin whitepaper.",
   "model": "llama3.1"
 }
 ```
 
-### Response body
+### Response
 
 | Field | Type | Description |
 |---|---|---|
 | `groundedness_score` | `number` | Continuous support in `[0, 1]` |
-| `source_authority_multiplier` | `number` | Mean Open PageRank multiplier |
-| `final_verified_trust_index` | `number` | Groundedness × authority (≤ 1) |
-| `academic_reasoning` | `string` | Analyst breakdown |
+| `authority_multiplier` | `number` | Mean Open PageRank multiplier |
+| `trust_index` | `number` | Groundedness × authority (≤ 1) |
+| `analyst_reasoning` | `string` | Analyst SUPPORT breakdown |
 | `per_url_authority` | `object[]` | Per-link domain multipliers |
 | `model_used` | `string` | Analyst model name |
-| `claim_count_expected` | `integer` | 1 for atomic, 2 for mixed claims |
+| `claim_count` | `integer` | Atomic claims expected for scoring |
 
 ### Status codes
 
@@ -59,4 +57,4 @@ Example:
 |---|---|
 | 200 | Success |
 | 422 | Validation error |
-| 500 | Crawl/analyst/pipeline failure |
+| 500 | Crawl / analyst / pipeline failure |

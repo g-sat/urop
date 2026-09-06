@@ -15,7 +15,7 @@ import pandas as pd
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
-API_URL = "http://127.0.0.1:8000/v2/evaluate-provenance"
+API_URL = "http://127.0.0.1:8000/v1/evaluate"
 HEALTH_URL = "http://127.0.0.1:8000/health"
 OLLAMA_GENERATE_URL = "http://127.0.0.1:11434/api/generate"
 DATASET_PATH = ROOT / "data" / "evaluation_dataset.json"
@@ -67,7 +67,7 @@ def run_benchmark() -> None:
         for index, case in enumerate(sample, start=1):
             payload = {
                 "urls": case["urls"],
-                "llm_output_to_test": case["statement"],
+                "statement": case["statement"],
                 "model": model_name,
             }
             started = time.time()
@@ -79,15 +79,15 @@ def run_benchmark() -> None:
                     continue
 
                 body = response.json()
-                reasoning = (body.get("academic_reasoning") or "").replace("\n", " | ")
+                reasoning = (body.get("analyst_reasoning") or "").replace("\n", " | ")
                 records.append(
                     {
                         "model": model_name,
                         "statement": case["statement"],
                         "expected_score": case["expected_score"],
                         "groundedness_score": body.get("groundedness_score", 0.0),
-                        "authority_multiplier": body.get("source_authority_multiplier", 1.0),
-                        "trust_index": body.get("final_verified_trust_index", 0.0),
+                        "authority_multiplier": body.get("authority_multiplier", 1.0),
+                        "trust_index": body.get("trust_index", 0.0),
                         "latency_seconds": round(latency, 2),
                         "analyst_reasoning": reasoning[:2000],
                         "per_url_authority": json.dumps(body.get("per_url_authority", [])),
@@ -97,7 +97,7 @@ def run_benchmark() -> None:
                 print(
                     f"[benchmark] {model_name} {index}/{len(sample)} "
                     f"ground={body.get('groundedness_score')} "
-                    f"trust={body.get('final_verified_trust_index')} "
+                    f"trust={body.get('trust_index')} "
                     f"expected={case['expected_score']} "
                     f"latency={latency:.2f}s"
                 )

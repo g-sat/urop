@@ -4,15 +4,17 @@ from __future__ import annotations
 
 from typing import List, Optional
 
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import AliasChoices, BaseModel, Field, HttpUrl
 
 
 class EvaluateRequest(BaseModel):
-    urls: List[HttpUrl] = Field(..., description="Evidence links used to measure the LLM statement")
+    """Measure an LLM statement against linked evidence pages."""
+
+    urls: List[HttpUrl] = Field(..., description="Evidence URLs used to ground the statement")
     statement: str = Field(
         ...,
-        description="LLM-generated statement to measure against the linked sources",
-        alias="llm_output_to_test",
+        description="LLM statement to measure",
+        validation_alias=AliasChoices("statement", "llm_output_to_test"),
     )
     model: Optional[str] = Field(
         default="llama3.1",
@@ -29,15 +31,13 @@ class UrlAuthority(BaseModel):
 
 
 class EvaluateResponse(BaseModel):
-    groundedness_score: float = Field(..., description="Continuous [0, 1] support vs linked sources")
-    source_authority_multiplier: float = Field(
-        ..., description="Mean Open PageRank authority multiplier across links"
-    )
-    final_verified_trust_index: float = Field(
+    groundedness_score: float = Field(..., description="Continuous support in [0, 1] vs linked evidence")
+    authority_multiplier: float = Field(..., description="Mean Open PageRank authority across links")
+    trust_index: float = Field(
         ...,
-        description="groundedness_score * source_authority_multiplier, capped at 1.0",
+        description="groundedness_score * authority_multiplier, capped at 1.0",
     )
-    academic_reasoning: str = Field(..., description="Analyst claim and support breakdown")
+    analyst_reasoning: str = Field(..., description="Claim-level SUPPORT breakdown from the analyst")
     per_url_authority: List[UrlAuthority] = Field(default_factory=list)
     model_used: str
-    claim_count_expected: int
+    claim_count: int = Field(..., description="Expected atomic claim count used for scoring")

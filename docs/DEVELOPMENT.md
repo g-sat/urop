@@ -8,14 +8,14 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-Set at least:
+Minimum `.env`:
 
 ```env
 OPR_API_KEY=opr_live_your_key_here
 DEFAULT_ANALYST_MODEL=llama3.1
 ```
 
-Ensure Ollama is running and the chosen model is pulled:
+Pull local models:
 
 ```powershell
 ollama pull llama3.1
@@ -24,13 +24,13 @@ ollama pull phi3
 
 ## Run the API
 
-From the repository root (so `linkground` is importable):
+From the repository root:
 
 ```powershell
 python -m linkground
 ```
 
-Or with uvicorn directly:
+Or:
 
 ```powershell
 uvicorn linkground.api.app:app --host 127.0.0.1 --port 8000
@@ -38,20 +38,32 @@ uvicorn linkground.api.app:app --host 127.0.0.1 --port 8000
 
 ## Scripts
 
-| Script | Purpose |
+| Command | Purpose |
 |---|---|
-| `scripts/build_dataset.py` | Build `data/evaluation_dataset.json` |
-| `scripts/run_benchmark.py` | Call the API on N cases × models |
-| `scripts/generate_report.py` | MAE/RMSE/F1 + plots under `results/` |
+| `python scripts/build_dataset.py` | Write `data/evaluation_dataset.json` |
+| `python scripts/run_benchmark.py` | Benchmark `/v1/evaluate` → `results/benchmark_metrics.csv` |
+| `python scripts/generate_report.py` | Metrics report + plots under `results/` |
+| `python scripts/evaluate_linked_answer.py ...` | Auto claim→link evaluation for arbitrary answers |
 
-## Coding conventions
+### Claim-linked evaluation example
 
-- Prefer clear names (`groundedness_score`, `authority_multiplier`) over slang.
+```powershell
+python scripts/evaluate_linked_answer.py `
+  --answer-file examples/sample_answer.txt `
+  --urls-file examples/url_pool.txt `
+  --output examples/sample_linked_eval.json
+```
+
+## Conventions
+
 - Keep service logic out of route handlers.
-- Network failures in authority/crawl paths should degrade gracefully, not crash the API.
+- Prefer clear names (`groundedness_score`, `trust_index`, `authority_multiplier`).
+- Network failures in authority/crawl paths should degrade gracefully.
 - Do not commit `.env`, `.cache/`, or `env/`.
+- Generated files under `results/` are gitignored; keep the folder with `.gitkeep`.
 
-## Legacy code
+## Project layout reminder
 
-Older prototypes live under `archive/` (`src/`, `builders/`, `test_env/`).  
-They are kept for reference only and are not part of the runtime path.
+Active runtime: `linkground/` + `scripts/` + `examples/`  
+Data: `data/evaluation_dataset.json`  
+Docs: `docs/`

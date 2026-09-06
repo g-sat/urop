@@ -1,0 +1,15 @@
+# Sample evidence URL pool for examples/sample_answer.txt
+https://threejs.org/
+https://relicvault.app/
+https://www.webdesignawards.io/nominees/relicvault-antique-identifier-know-what-you-ve-found
+https://www.webdesignawards.io/nominees/casa-di-solare
+https://www.webdesignawards.io/rankings/websites/three-js
+https://www.merci-michel.com/projects/
+https://www.webgpu.com/showcase/addictive-egg-hunt-game/
+https://snp.agency/cases/the-quarry-house
+https://orpetron.com/sites/the-quarry-house/
+https://pilot.auto/
+https://www.awwwards.com/websites/three-js/
+https://landing.love/
+https://webflow.com/made-in-webflow
+https://docs.pmnd.rs/react-three-fiber/getting-started/introduction

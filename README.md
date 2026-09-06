@@ -2,14 +2,14 @@
 
 APIs for **measuring LLM outputs using linked web sources**.
 
-Given an LLM statement and a set of URLs, LinkGround:
+Given an LLM statement and URLs, LinkGround:
 
 1. Crawls the linked pages for evidence  
-2. Scores **continuous groundedness** in \\([0, 1]\\) with a local analyst model  
+2. Scores **continuous groundedness** in `[0, 1]` with a local analyst model  
 3. Looks up **Open PageRank** domain authority for those links  
 4. Returns a **trust index** = groundedness × authority (capped at 1.0)
 
-This is the core novelty: link-conditioned measurement of LLM claims, not free-form fact checking from model memory.
+Novelty: link-conditioned measurement of LLM claims — not open-web memory fact-checking.
 
 ---
 
@@ -17,19 +17,20 @@ This is the core novelty: link-conditioned measurement of LLM claims, not free-f
 
 ```text
 urop/
-├── linkground/                 # Installable API package
+├── linkground/                 # API package
 │   ├── api/                    # FastAPI app, routes, schemas
-│   ├── services/               # Authority, crawl, analyst, scoring, cache
+│   ├── services/               # authority, crawler, analyst, scoring, cache
 │   ├── config.py
 │   └── __main__.py             # python -m linkground
-├── scripts/                    # Developer CLI utilities
-│   ├── build_dataset.py
-│   ├── run_benchmark.py
-│   └── generate_report.py
-├── data/                       # Evaluation datasets
-├── results/                    # Benchmark metrics and plots
-├── docs/                       # Architecture and API docs
-├── archive/                    # Legacy prototypes (not used at runtime)
+├── scripts/
+│   ├── build_dataset.py        # Build data/evaluation_dataset.json
+│   ├── run_benchmark.py        # Benchmark API on the dataset
+│   ├── generate_report.py      # MAE/RMSE/F1 + plots
+│   └── evaluate_linked_answer.py  # Auto claim→link evaluation
+├── examples/                   # Sample answer, URL pool, sample output
+├── data/                       # evaluation_dataset.json
+├── results/                    # Benchmark outputs (gitignored contents)
+├── docs/
 ├── requirements.txt
 ├── .env.example
 └── README.md
@@ -39,33 +40,26 @@ urop/
 
 ## Quick start
 
-### 1. Environment
-
 ```powershell
-cd C:\Users\sathw\Desktop\urop
 .\env\Scripts\Activate.ps1
 pip install -r requirements.txt
 copy .env.example .env
-# Edit .env and set OPR_API_KEY
-```
+# set OPR_API_KEY in .env
 
-### 2. Start the API
-
-```powershell
 python -m linkground
 ```
 
-Interactive docs: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+Docs UI: http://127.0.0.1:8000/docs
 
-### 3. Example request
+### Example request
 
 ```powershell
-curl -X POST http://127.0.0.1:8000/v2/evaluate-provenance `
+curl -X POST http://127.0.0.1:8000/v1/evaluate `
   -H "Content-Type: application/json" `
-  -d "{\"urls\":[\"https://en.wikipedia.org/wiki/Pluto\"],\"llm_output_to_test\":\"The IAU reclassified Pluto as a dwarf planet in 2006.\",\"model\":\"llama3.1\"}"
+  -d "{\"urls\":[\"https://en.wikipedia.org/wiki/Pluto\"],\"statement\":\"The IAU reclassified Pluto as a dwarf planet in 2006.\",\"model\":\"llama3.1\"}"
 ```
 
-### 4. Dataset, benchmark, report
+### Dataset, benchmark, report
 
 ```powershell
 python scripts/build_dataset.py
@@ -73,7 +67,15 @@ python scripts/run_benchmark.py
 python scripts/generate_report.py
 ```
 
-Outputs land in `results/`.
+### Auto claim → link evaluation
+
+```powershell
+python scripts/evaluate_linked_answer.py `
+  --answer-file examples/sample_answer.txt `
+  --urls-file examples/url_pool.txt
+```
+
+Add `--propose-urls` if the answer names sites without providing links.
 
 ---
 
@@ -81,13 +83,17 @@ Outputs land in `results/`.
 
 | Field | Meaning |
 |---|---|
-| `groundedness_score` | Continuous support vs crawled link evidence |
-| `source_authority_multiplier` | Mean Open PageRank weight of the links |
-| `final_verified_trust_index` | Groundedness × authority (≤ 1.0) |
-| `academic_reasoning` | Analyst claim / SUPPORT breakdown |
+| `groundedness_score` | Continuous support vs crawled evidence |
+| `authority_multiplier` | Mean Open PageRank weight of the links |
+| `trust_index` | Groundedness × authority (≤ 1.0) |
+| `analyst_reasoning` | Claim / SUPPORT breakdown |
 | `per_url_authority` | Per-link domain multipliers |
+| `claim_count` | Atomic claims expected for scoring |
 
-Backward-compatible request alias: `llm_output_to_test` (same as `statement`).
+Request body uses `statement` (also accepts legacy `llm_output_to_test`).
+
+Primary endpoint: `POST /v1/evaluate`  
+Legacy alias (hidden): `POST /v2/evaluate-provenance`
 
 ---
 
@@ -102,6 +108,6 @@ Backward-compatible request alias: `llm_output_to_test` (same as `statement`).
 ## Requirements
 
 - Python 3.10+
-- Ollama with models such as `llama3.1` / `phi3`
-- Open PageRank API key (`OPR_API_KEY`)
+- Ollama (`llama3.1`, `phi3`, …)
+- `OPR_API_KEY` (Open PageRank)
 - Network access for crawling evidence URLs
