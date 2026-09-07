@@ -1,13 +1,17 @@
 from __future__ import annotations
 import argparse
 import json
+import os
 import re
+import sys
 import time
 from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlparse
 import requests
 ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 DEFAULT_API = "http://127.0.0.1:8000/v1/evaluate"
 DEFAULT_HEALTH = "http://127.0.0.1:8000/health"
 DEFAULT_OLLAMA = "http://127.0.0.1:11434/api/chat"
@@ -226,34 +230,112 @@ def load_url_pool(answer_text: str, urls: list[str] | None, urls_file: Path | No
         add_many(lines)
     return pool
 
-def ollama_chat(model: str, system: str, user: str, ollama_url: str) -> str:
-    payload = {'model': model, 'stream': False, 'messages': [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}], 'options': {'temperature': 0.0, 'num_predict': 1200}}
+def ollama_chat(
+    model: str,
+    system: str,
+    user: str,
+    ollama_url: str,
+    *,
+    max_tokens: int = 1200,
+    prefer_remote: bool = True,
+) -> str:
+    """Chat helper: uses Groq/OpenAI-compatible judge if JUDGE_BASE_URL is set."""
+    judge_base = os.getenv("JUDGE_BASE_URL", "").rstrip("/")
+    judge_key = os.getenv("JUDGE_API_KEY", "")
+    messages = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": user},
+    ]
+    if prefer_remote and judge_base:
+        last_err: Exception | None = None
+        for attempt in range(4):
+            response = requests.post(
+                f"{judge_base}/chat/completions",
+                headers={"Authorization": f"Bearer {judge_key or 'unused'}"},
+                json={
+                    "model": model,
+                    "messages": messages,
+                    "temperature": 0.0,
+                    "max_tokens": max_tokens,
+                },
+                timeout=180,
+            )
+            if response.status_code == 429:
+                time.sleep(8 * (attempt + 1))
+                last_err = requests.HTTPError("429", response=response)
+                continue
+            response.raise_for_status()
+            body = response.json()
+            choices = body.get("choices") or []
+            if not choices:
+                return ""
+            message = choices[0].get("message") or {}
+            content = (message.get("content") or "").strip()
+            reasoning = (message.get("reasoning") or "").strip()
+            for candidate in (content, reasoning, f"{content}\n{reasoning}".strip()):
+                if candidate and ("{" in candidate or "GROUNDEDNESS" in candidate.upper()):
+                    return candidate
+            return content or reasoning
+        if last_err:
+            raise last_err
+
+    local_model = model
+    if "/" in model or model.startswith("openai/") or model.startswith("qwen/"):
+        local_model = os.getenv("LOCAL_SPLIT_MODEL", "llama3.1")
+    payload = {
+        "model": local_model,
+        "stream": False,
+        "messages": messages,
+        "options": {"temperature": 0.0, "num_predict": max_tokens},
+    }
     response = requests.post(ollama_url, json=payload, timeout=180)
     response.raise_for_status()
     body = response.json()
-    message = body.get('message')
+    message = body.get("message")
     if isinstance(message, dict):
-        return message.get('content', '') or ''
-    return body.get('response', '') or ''
+        return message.get("content", "") or ""
+    return body.get("response", "") or ""
 
 def extract_json_payload(text: str) -> Any:
-    text = (text or '').strip()
+    text = (text or "").strip()
     if not text:
-        raise ValueError('Empty model response')
-    fence = re.search('```(?:json)?\\s*(\\{.*?\\}|\\[.*?\\])\\s*```', text, flags=re.DOTALL | re.IGNORECASE)
+        raise ValueError("Empty model response")
+    # Drop common chain-of-thought wrappers
+    text = re.sub(r"(?is)<think>.*?(?:</think>|$)", " ", text)
+    text = re.sub(r"(?is)<thinking>.*?(?:</thinking>|$)", " ", text)
+    fence = re.search(r"```(?:json)?\s*(\{.*?\}|\[.*?\])\s*```", text, flags=re.DOTALL | re.IGNORECASE)
     if fence:
         return json.loads(fence.group(1))
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
-    start_obj, end_obj = (text.find('{'), text.rfind('}'))
+    # Prefer object containing "claims" / "entities"
+    for key in ("claims", "entities"):
+        marker = text.find(f'"{key}"')
+        if marker == -1:
+            marker = text.find(f"'{key}'")
+        if marker != -1:
+            start = text.rfind("{", 0, marker)
+            end = text.rfind("}")
+            if start != -1 and end > start:
+                try:
+                    return json.loads(text[start : end + 1])
+                except json.JSONDecodeError:
+                    pass
+    start_obj, end_obj = text.find("{"), text.rfind("}")
     if start_obj != -1 and end_obj > start_obj:
-        return json.loads(text[start_obj:end_obj + 1])
-    start_arr, end_arr = (text.find('['), text.rfind(']'))
+        try:
+            return json.loads(text[start_obj : end_obj + 1])
+        except json.JSONDecodeError:
+            pass
+    start_arr, end_arr = text.find("["), text.rfind("]")
     if start_arr != -1 and end_arr > start_arr:
-        return json.loads(text[start_arr:end_arr + 1])
-    raise ValueError(f'Could not parse JSON from model output: {text[:300]!r}')
+        try:
+            return json.loads(text[start_arr : end_arr + 1])
+        except json.JSONDecodeError:
+            pass
+    raise ValueError(f"Could not parse JSON from model output: {text[:300]!r}")
 
 def propose_missing_urls(answer_text: str, model: str, ollama_url: str) -> list[str]:
     system = 'You extract website names from text and propose their most likely official or gallery URLs. Return JSON only.'
@@ -280,8 +362,13 @@ def propose_missing_urls(answer_text: str, model: str, ollama_url: str) -> list[
     return urls
 
 def split_and_assign_claims(answer_text: str, url_pool: list[str], model: str, ollama_url: str) -> list[dict[str, Any]]:
-    system = 'You are a claim decomposition and evidence-routing engine. Return JSON only. Never chat.'
-    numbered_urls = '\n'.join((f'{index}. {url}' for index, url in enumerate(url_pool)))
+    # Keep splitting local/JSON-friendly; scoring still uses the request model via API.
+    split_model = os.getenv("LOCAL_SPLIT_MODEL", "llama3.1")
+    system = (
+        "You are a claim decomposition and evidence-routing engine. "
+        "Return a single JSON object only. No markdown. No analysis. No thinking."
+    )
+    numbered_urls = "\n".join(f"{index}. {url}" for index, url in enumerate(url_pool))
     user = (
         "Split the ANSWER into atomic factual claims.\n"
         "Assign each claim to the 1-2 best matching URLs from URL_POOL.\n\n"
@@ -302,8 +389,21 @@ def split_and_assign_claims(answer_text: str, url_pool: list[str], model: str, o
         '{\n  "claims": [\n    {"id": "C01", "statement": "one atomic claim", "url_indexes": [0]}\n  ]\n}\n\n'
         f"URL_POOL:\n{numbered_urls}\n\nANSWER:\n{answer_text}\n"
     )
-    raw = ollama_chat(model, system, user, ollama_url)
-    data = extract_json_payload(raw)
+    raw = ollama_chat(
+        split_model, system, user, ollama_url, max_tokens=2500, prefer_remote=False
+    )
+    try:
+        data = extract_json_payload(raw)
+    except ValueError:
+        retry_user = (
+            user
+            + "\n\nIMPORTANT: Your previous reply was invalid. "
+            "Reply with ONLY the JSON object. First character must be `{`."
+        )
+        raw = ollama_chat(
+            split_model, system, retry_user, ollama_url, max_tokens=2500, prefer_remote=False
+        )
+        data = extract_json_payload(raw)
     claims_raw = data.get('claims', []) if isinstance(data, dict) else data
     claims: list[dict[str, Any]] = []
     for index, item in enumerate(claims_raw or [], start=1):
@@ -472,16 +572,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--urls-file", type=Path, default=None)
     parser.add_argument("--url", action="append", default=[])
     parser.add_argument("--propose-urls", action="store_true")
-    parser.add_argument("--model", default="llama3.1")
+    parser.add_argument("--model", default=None)
     parser.add_argument("--judge-runs", type=int, default=1)
     parser.add_argument("--api-url", default=DEFAULT_API)
     parser.add_argument("--health-url", default=DEFAULT_HEALTH)
     parser.add_argument("--ollama-url", default=DEFAULT_OLLAMA)
     parser.add_argument("--output", type=Path, default=ROOT / "results" / "linked_answer_eval.json")
-    return parser.parse_args()
+    args = parser.parse_args()
+    if not args.model:
+        args.model = os.getenv("DEFAULT_ANALYST_MODEL", "llama3.1")
+    return args
 
 def main() -> None:
     args = parse_args()
+    t_run0 = time.time()
     answer_text = args.answer_file.read_text(encoding="utf-8").strip()
     if not answer_text:
         raise SystemExit("empty answer file")
@@ -530,11 +634,13 @@ def main() -> None:
             )
 
     summary = aggregate(rows)
+    wall = round(time.time() - t_run0, 2)
     report = {
         "answer_file": str(args.answer_file),
         "model": args.model,
         "judge_runs": args.judge_runs,
         "url_pool": url_pool,
+        "wall_seconds": wall,
         "summary": summary,
         "claims": rows,
     }
@@ -544,6 +650,7 @@ def main() -> None:
         f"mean_g={summary.get('mean_groundedness')}  "
         f"factual_g={summary.get('mean_groundedness_factual')}  "
         f"mean_t={summary.get('mean_trust_index')}  "
+        f"wall={wall}s  "
         f"-> {args.output}"
     )
 if __name__ == '__main__':

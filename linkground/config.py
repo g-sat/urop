@@ -3,7 +3,8 @@ import os
 from pathlib import Path
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+
+    load_dotenv(override=True)
 except ImportError:
     pass
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -14,7 +15,12 @@ DATA_DIR = PROJECT_ROOT / 'data'
 RESULTS_DIR = PROJECT_ROOT / 'results'
 OLLAMA_CHAT_URL = os.getenv('OLLAMA_CHAT_URL', 'http://localhost:11434/api/chat')
 OLLAMA_GENERATE_URL = os.getenv('OLLAMA_GENERATE_URL', 'http://localhost:11434/api/generate')
+# OpenAI-compatible judge (Groq / LLM7 / etc.). Empty = use local Ollama.
+JUDGE_BASE_URL = os.getenv('JUDGE_BASE_URL', '').rstrip('/')
+JUDGE_API_KEY = os.getenv('JUDGE_API_KEY', '')
 DEFAULT_ANALYST_MODEL = os.getenv('DEFAULT_ANALYST_MODEL', 'llama3.1')
+EVIDENCE_CHAR_BUDGET = int(os.getenv('EVIDENCE_CHAR_BUDGET', '2500'))
+JUDGE_MAX_TOKENS = int(os.getenv('JUDGE_MAX_TOKENS', '220'))
 OPR_API_KEY = os.getenv('OPR_API_KEY', '')
 OPR_BULK_URL = os.getenv('OPR_BULK_URL', 'https://openpagerank.keywordseverywhere.com/v1/domains/bulk')
 API_HOST = os.getenv('API_HOST', '127.0.0.1')

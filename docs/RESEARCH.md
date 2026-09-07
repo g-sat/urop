@@ -1,37 +1,32 @@
 # Research notes
 
-Link-conditioned support estimation: score a claim against pages you can crawl, keep prestige separate, and run a few checks that catch common mixups.
+Link-conditioned support estimation: score a claim against crawled pages, keep prestige separate, run checks that catch common mixups.
 
-## What we measure
+## Signals
 
-1. Textual support (`groundedness_score`)
-2. OPR prestige (`authority_multiplier`) — popularity, not truth
-3. Whether the *cited* URL actually backs the claim (swaps)
-4. When discovery / allowlist filled in for missing cites
+1. Textual support — `groundedness_score`
+2. OPR prestige — `authority_multiplier` (popularity, not truth)
+3. Citation swaps — matched vs wrong URL
+4. Discovery / allowlist — when cites are missing
 
-`research.inflation = max(0, trust - support)`.  
-`research.flags` / `research.source` tag discovery and discounts.
+`research.inflation = max(0, trust - support)`.
 
-## Suite files
+## Suite (`data/lcse/`)
 
-| File | What |
+| File | Role |
 |---|---|
-| `data/lcse/confound_grid.jsonl` | supported/unsupported × high/low prestige |
-| `data/lcse/citation_swap.jsonl` | same claim, matched vs swapped URL |
-| `data/lcse/ethics_audit.jsonl` | caller cites vs discovery |
+| `citation_swap.jsonl` | matched vs swapped URL |
+| `confound_grid.jsonl` | support × prestige cells |
+| `ethics_audit.jsonl` | caller vs discovery |
 
-Hard-zero support forces trust to zero, so prestige inflation only shows when support is partial. Prefer on-topic-but-wrong pages for the unsupported/high-prestige cells.
+Lead result: citation swaps. Soft-wrong UH cells are needed before prestige inflation shows cleanly (hard-zero support forces trust 0).
 
 ## Run
 
 ```powershell
 python -m linkground
-python scripts/run_lcse_suite.py
-# --only confound|swaps|ethics
+python scripts/run_lcse_suite.py --only swaps --output results/lcse_swaps.json
+python scripts/run_lcse_suite.py --only confound --output results/lcse_confound.json
 ```
 
-Writes `results/lcse_suite.json`.
-
-## Scope
-
-Not a world-truth oracle. Discovery misses niches outside the allowlist. The point is an auditable scoring protocol.
+Canonical numbers: `results/COMPARISON.md` · roadmap: `docs/PAPER_ROADMAP.md`.

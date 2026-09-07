@@ -12,6 +12,7 @@ venv/
 dist/
 build/
 
-# Generated artifacts (keep folder via .gitkeep)
+# Generated artifacts (keep folder + comparison note)
 results/*
 !results/.gitkeep
+!results/COMPARISON.md

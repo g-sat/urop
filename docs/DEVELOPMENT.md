@@ -8,15 +8,19 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-`.env` at minimum:
+`.env` sections (see `.env.example`):
+
+1. **API server** — `API_HOST`, `API_PORT`  
+2. **Open PageRank** — `OPR_API_KEY`  
+3. **Judge** — `JUDGE_BASE_URL`, `JUDGE_API_KEY`, `DEFAULT_ANALYST_MODEL`  
+4. **Ollama** — split / offline (`LOCAL_SPLIT_MODEL`)  
+5. **Tuning** — evidence budget, discovery, cache  
 
 ```env
 OPR_API_KEY=...
-DEFAULT_ANALYST_MODEL=llama3.1
-```
-
-```powershell
-ollama pull llama3.1
+JUDGE_BASE_URL=https://api.llm7.io/v1
+JUDGE_API_KEY=...
+DEFAULT_ANALYST_MODEL=mistral-Nemo-Instruct-2407
 ```
 
 ## API
@@ -35,8 +39,8 @@ Stop-Process -Id <pid> -Force
 ## Common commands
 
 ```powershell
-python scripts/run_lcse_suite.py
-python scripts/evaluate_linked_answer.py --answer-file examples/sample_answer.txt --urls-file examples/url_pool.txt
+python scripts/run_lcse_suite.py --only swaps --output results/lcse_swaps.json
+python scripts/rescore_linked_eval.py --from-json results/eg1_claims.json --output results/eg1_llm7.json --model mistral-Nemo-Instruct-2407 --sleep 2
 python scripts/run_benchmark.py
 python scripts/generate_report.py
 ```

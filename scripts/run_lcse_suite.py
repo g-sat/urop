@@ -164,6 +164,8 @@ def main() -> None:
     print(f"scoring {len(cases)} cases")
     rows = []
     for i, case in enumerate(cases, 1):
+        if i > 1:
+            time.sleep(2.5)
         row = score(args.api_url, case, args.model)
         rows.append(row)
         cid = case.get("id", i)
