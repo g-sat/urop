@@ -113,6 +113,48 @@ async def evaluate(payload: EvaluateRequest) -> EvaluateResponse:
         ]
 
         documents = await collect_evidence(urls)
+        quality = _evidence_quality([doc.source for doc in documents])
+        crawl_rescued = False
+
+        # If every caller page failed to crawl, supplement from trusted discovery.
+        if (
+            caller_urls
+            and not discovered_set
+            and quality <= FALLBACK_EVIDENCE_FACTOR
+            and all(doc.source == "fallback" for doc in documents)
+        ):
+            found = await discover_evidence_urls(
+                statement,
+                max_urls=payload.max_discovered_urls,
+                depth=payload.discovery_depth,
+            )
+            for item in found:
+                if item.url not in urls:
+                    urls.append(item.url)
+                    discovered_set.add(item.url)
+                    discovered_items.append(
+                        DiscoveredUrlItem(
+                            url=item.url,
+                            score=round(item.score, 3),
+                            origin=item.origin,
+                            title=item.title,
+                        )
+                    )
+            if discovered_set:
+                crawl_rescued = True
+                n_caller = sum(1 for u in urls if u in caller_set)
+                n_discovered = sum(1 for u in urls if u in discovered_set and u not in caller_set)
+                evidence_mode = "mixed" if n_caller and n_discovered else ("discovered" if n_discovered else "caller")
+                origin_by_url = {u: ("caller" if u in caller_set else "discovered") for u in urls}
+                authority_scores = await fetch_authority_multipliers(urls)
+                mean_authority = sum(authority_scores) / len(authority_scores)
+                per_url = [
+                    UrlAuthority(url=u, domain=normalize_domain(u), authority_multiplier=round(s, 3))
+                    for u, s in zip(urls, authority_scores)
+                ]
+                documents = await collect_evidence(urls)
+                quality = _evidence_quality([doc.source for doc in documents])
+
         source_context = format_evidence_block(documents, origin_by_url=origin_by_url)
         evidence_items = [
             EvidenceItem(
@@ -124,7 +166,6 @@ async def evaluate(payload: EvaluateRequest) -> EvaluateResponse:
             )
             for doc in documents
         ]
-        quality = _evidence_quality([doc.source for doc in documents])
         weight = evidence_origin_weight(
             evidence_mode,
             caller_url_count=n_caller,
@@ -146,6 +187,8 @@ async def evaluate(payload: EvaluateRequest) -> EvaluateResponse:
             notes.append(f"discovery weight={weight}")
         if quality < 1.0:
             notes.append(f"weak crawl evidence_quality={quality}")
+        if crawl_rescued:
+            notes.append("crawl_rescue_mixed")
         if judge_std is not None:
             notes.append(f"judge_std={judge_std}")
 
