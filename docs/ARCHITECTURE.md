@@ -1,4 +1,6 @@
-# Architecture
+# Architecture (short)
+
+Full developer narrative: **`docs/DEVELOPER_GUIDE.md`**.
 
 Request path for `/v1/evaluate`:
 
@@ -6,11 +8,11 @@ Request path for `/v1/evaluate`:
 urls? → discovery (if needed)
      → Open PageRank (prestige)
      → crawl (live | cache | fallback)
-     → Ollama judge (SUPPORT / GROUNDEDNESS)
+     → judge LLM (SUPPORT / GROUNDEDNESS)  # LLM7 / Groq / Ollama via .env
      → apply evidence_quality × discovery_weight
      → attach research block
 
-groundedness_score = primary
+groundedness_score = primary (support)
 trust_index        = groundedness × mean prestige (capped at 1)
 ```
 
@@ -18,25 +20,26 @@ trust_index        = groundedness × mean prestige (capped at 1)
 
 | Path | Role |
 |---|---|
-| `api/routes.py` | HTTP |
+| `api/routes.py` | HTTP orchestration |
 | `api/schemas.py` | models |
 | `services/crawler.py` | fetch / cache / fallback |
 | `services/authority.py` | OPR |
-| `services/analyst.py` | judge |
-| `services/discovery.py` | URL finding |
-| `services/trusted_sources.py` | allowlist |
+| `services/analyst.py` | closed-book judge |
+| `services/discovery.py` | allowlisted URL finding |
+| `services/trusted_sources.py` | domain allowlist |
 | `services/weights.py` | discovery discount |
 | `services/reporting.py` | research block |
-| `services/scoring.py` | parse judge output |
+| `services/scoring.py` | claim_count + parse judge output |
 | `config.py` | env |
 
 ## Scripts
 
 | Script | Role |
 |---|---|
-| `run_lcse_suite.py` | suite runner |
+| `run_lcse_suite.py` | short LCSE suite |
 | `evaluate_linked_answer.py` | split answer → URLs → score |
-| `run_benchmark.py` | older dataset loop |
-| `generate_report.py` | MAE/RMSE plots |
+| `build_paper_dataset.py` | 50 long-answer paper cases |
+| `run_benchmark.py` | paper benchmark → CSV |
+| `generate_report.py` | MAE / swap Δ / ternary F1 + plots |
 
 Crawl cache: `.cache/crawls/`. OPR cache: `.cache/opr_domain_ranks.json`.

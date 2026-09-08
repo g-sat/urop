@@ -1,5 +1,7 @@
 # Development
 
+Full architecture and design rationale: **`docs/DEVELOPER_GUIDE.md`**.
+
 ## Setup
 
 ```powershell
@@ -39,10 +41,10 @@ Stop-Process -Id <pid> -Force
 ## Common commands
 
 ```powershell
-python scripts/run_lcse_suite.py --only swaps --output results/lcse_swaps.json
-python scripts/rescore_linked_eval.py --from-json results/eg1_claims.json --output results/eg1_llm7.json --model mistral-Nemo-Instruct-2407 --sleep 2
-python scripts/run_benchmark.py
+python scripts/build_paper_dataset.py
+python scripts/run_benchmark.py --sleep 2
 python scripts/generate_report.py
+python scripts/run_lcse_suite.py --only swaps --output results/lcse_swaps.json
 ```
 
 ## Conventions

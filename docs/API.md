@@ -17,6 +17,7 @@
 | `discover_evidence` | bool |
 | `discovery_depth` | 0–2 |
 | `max_discovered_urls` | 1–8 |
+| `claim_count` | optional 1–8; force claim lines (use `2` for mixed). Default: infer from text. |
 
 | response | notes |
 |---|---|

@@ -23,6 +23,12 @@ class EvaluateRequest(BaseModel):
     )
     discovery_depth: int = Field(default=1, ge=0, le=2, description="Trusted-link BFS depth")
     max_discovered_urls: int = Field(default=4, ge=1, le=8, description="Cap on discovered URLs")
+    claim_count: Optional[int] = Field(
+        default=None,
+        ge=1,
+        le=8,
+        description="Force this many claim lines (e.g. 2 for mixed). Default: infer from text.",
+    )
     model_config = {"populate_by_name": True}
 
     @model_validator(mode="after")

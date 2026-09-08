@@ -59,7 +59,7 @@ async def trusted_domains() -> dict:
 async def evaluate(payload: EvaluateRequest) -> EvaluateResponse:
     caller_urls = [str(u) for u in payload.urls]
     statement = strip_discourse_prefix(payload.statement)
-    claim_count = infer_claim_count(statement)
+    claim_count = payload.claim_count if payload.claim_count is not None else infer_claim_count(statement)
     model_name = payload.model or "llama3.1"
     discovered_items: list[DiscoveredUrlItem] = []
     discovered_set: set[str] = set()

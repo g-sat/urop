@@ -27,7 +27,7 @@ Evaluating LLM answers “with sources” often mixes textual support with web p
 
 1. Fix weak swap pairs (e.g. B-009 matched=0)
 2. Soft-wrong UH mid-scale scores (0.2–0.5) for inflation
-3. MAE vs `label_support` + multi-run variance
+3. Run `scripts/run_benchmark.py` on `data/paper_benchmark.jsonl` and report **MAE by condition + swap Δ** (not overall F1)
 4. Related-work + ethics (allowlist bias) sections
 
 ## Writing order
@@ -36,16 +36,19 @@ Evaluating LLM answers “with sources” often mixes textual support with web p
 2. Method (LCSE)
 3. Exp B swaps
 4. Exp A confound + limits
-5. Exp C discovery disclosure
-6. Appendix: EG1/EG2
-7. Limitations
+5. Paper benchmark (MAE + swap Δ on long answers)
+6. Exp C discovery disclosure
+7. Appendix: EG1/EG2
+8. Limitations
 
 ## Commands
 
 ```powershell
 python -m linkground
+python scripts/build_paper_dataset.py
+python scripts/run_benchmark.py --sleep 2
+python scripts/generate_report.py
 python scripts/run_lcse_suite.py --only swaps --output results/lcse_swaps.json
-python scripts/run_lcse_suite.py --only confound --output results/lcse_confound.json
 ```
 
-Details: `results/COMPARISON.md` · `docs/RESEARCH.md`
+Details: `results/COMPARISON.md` · `docs/RESEARCH.md` · `data/paper_benchmark_schema.md`

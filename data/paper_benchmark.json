@@ -1,0 +1,712 @@
+[
+  {
+    "id": "pluto-supported",
+    "topic": "pluto",
+    "condition": "supported",
+    "pair_id": "pluto-attr",
+    "statement": "According to standard astronomical references, the International Astronomical Union reclassified Pluto as a dwarf planet in 2006 after revising the definition of a planet. Under that definition Pluto remains an important Kuiper Belt object, but it is no longer counted among the classical planets of the Solar System.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 317
+  },
+  {
+    "id": "pluto-swapped",
+    "topic": "pluto",
+    "condition": "swapped",
+    "pair_id": "pluto-attr",
+    "statement": "According to standard astronomical references, the International Astronomical Union reclassified Pluto as a dwarf planet in 2006 after revising the definition of a planet. Under that definition Pluto remains an important Kuiper Belt object, but it is no longer counted among the classical planets of the Solar System.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Colosseum"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 317
+  },
+  {
+    "id": "pluto-unsupported",
+    "topic": "pluto",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "Recent IAU proceedings confirm that Pluto was restored as the ninth planet in 2024 and that passenger spacecraft already operate regularly in its atmosphere of liquid gold. These claims are presented as settled consensus in the linked encyclopedia article.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 256
+  },
+  {
+    "id": "pluto-soft_wrong",
+    "topic": "pluto",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "Pluto is discussed extensively in the linked high-prestige encyclopedia page. The page is often cited to claim that Pluto has always been classified as a classical planet under the current IAU rules and that the 2006 decision never changed its official status.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto"
+    ],
+    "label_support": 0.3,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 260
+  },
+  {
+    "id": "pluto-mixed",
+    "topic": "pluto",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "According to standard astronomical references, the International Astronomical Union reclassified Pluto as a dwarf planet in 2006 after revising the definition of a planet. Under that definition Pluto remains an important Kuiper Belt object, but it is no longer counted among the classical planets of the Solar System. However, Recent IAU proceedings confirm that Pluto was restored as the ninth planet in 2024 and that passenger spacecraft already operate regularly in its atmosphere of liquid gold. These claims are presented as settled consensus in the linked encyclopedia article.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 583,
+    "claim_count": 2
+  },
+  {
+    "id": "relativity-supported",
+    "topic": "relativity",
+    "condition": "supported",
+    "pair_id": "relativity-attr",
+    "statement": "Einstein's special relativity, published in 1905, treats the speed of light in vacuum as constant for all inertial observers and replaces Newtonian absolute time with spacetime structure. The linked overview summarizes those core premises and later experimental support.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 270
+  },
+  {
+    "id": "relativity-swapped",
+    "topic": "relativity",
+    "condition": "swapped",
+    "pair_id": "relativity-attr",
+    "statement": "Einstein's special relativity, published in 1905, treats the speed of light in vacuum as constant for all inertial observers and replaces Newtonian absolute time with spacetime structure. The linked overview summarizes those core premises and later experimental support.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 270
+  },
+  {
+    "id": "relativity-unsupported",
+    "topic": "relativity",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "Special relativity is summarized on the linked page as proving that Earth is a flat triangle floating in water and that clocks never need relativistic corrections in GPS.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 170
+  },
+  {
+    "id": "relativity-soft_wrong",
+    "topic": "relativity",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "The special relativity article is a high-prestige science page. A common misreading claims Einstein published the theory in 1920 and that the paper mainly introduced gravity as a physical fluid rather than invariant light speed.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity"
+    ],
+    "label_support": 0.3,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 228
+  },
+  {
+    "id": "relativity-mixed",
+    "topic": "relativity",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Einstein's special relativity, published in 1905, treats the speed of light in vacuum as constant for all inertial observers and replaces Newtonian absolute time with spacetime structure. The linked overview summarizes those core premises and later experimental support. However, Special relativity is summarized on the linked page as proving that Earth is a flat triangle floating in water and that clocks never need relativistic corrections in GPS.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 450,
+    "claim_count": 2
+  },
+  {
+    "id": "bitcoin-supported",
+    "topic": "bitcoin",
+    "condition": "supported",
+    "pair_id": "bitcoin-attr",
+    "statement": "Bitcoin originated from a 2008 whitepaper attributed to Satoshi Nakamoto describing a peer-to-peer electronic cash system secured by proof-of-work consensus rather than a central issuer. The linked page outlines that history and the basic protocol design.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 255
+  },
+  {
+    "id": "bitcoin-swapped",
+    "topic": "bitcoin",
+    "condition": "swapped",
+    "pair_id": "bitcoin-attr",
+    "statement": "Bitcoin originated from a 2008 whitepaper attributed to Satoshi Nakamoto describing a peer-to-peer electronic cash system secured by proof-of-work consensus rather than a central issuer. The linked page outlines that history and the basic protocol design.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Special_relativity"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 255
+  },
+  {
+    "id": "bitcoin-unsupported",
+    "topic": "bitcoin",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The Bitcoin page is cited here to assert that every coin is redeemable for physical gold bars held by the United States Treasury and that mining is performed with copper tokens.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 177
+  },
+  {
+    "id": "bitcoin-soft_wrong",
+    "topic": "bitcoin",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "Using the high-prestige Bitcoin encyclopedia entry, some summaries claim Nakamoto stated explicitly that bitcoins are commodity-backed by vaulted gold and therefore cannot be volatile. That reading goes beyond what the page supports.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin"
+    ],
+    "label_support": 0.3,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 233
+  },
+  {
+    "id": "bitcoin-mixed",
+    "topic": "bitcoin",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Bitcoin originated from a 2008 whitepaper attributed to Satoshi Nakamoto describing a peer-to-peer electronic cash system secured by proof-of-work consensus rather than a central issuer. The linked page outlines that history and the basic protocol design. However, The Bitcoin page is cited here to assert that every coin is redeemable for physical gold bars held by the United States Treasury and that mining is performed with copper tokens.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 442,
+    "claim_count": 2
+  },
+  {
+    "id": "www-supported",
+    "topic": "www",
+    "condition": "supported",
+    "pair_id": "www-attr",
+    "statement": "Tim Berners-Lee proposed the World Wide Web while working at CERN, introducing HTTP and related ideas that let hypertext documents link across the Internet. The linked article covers that origin story and the early growth of the web.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 233
+  },
+  {
+    "id": "www-swapped",
+    "topic": "www",
+    "condition": "swapped",
+    "pair_id": "www-attr",
+    "statement": "Tim Berners-Lee proposed the World Wide Web while working at CERN, introducing HTTP and related ideas that let hypertext documents link across the Internet. The linked article covers that origin story and the early growth of the web.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Colosseum"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 233
+  },
+  {
+    "id": "www-unsupported",
+    "topic": "www",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The World Wide Web article is used to claim the protocol was invented by ancient Egyptians to coordinate pyramid construction and was never associated with CERN.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 161
+  },
+  {
+    "id": "www-soft_wrong",
+    "topic": "www",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "The linked web-history page is authoritative, yet a soft-wrong gloss says Berners-Lee designed HTTP so the web would fully replace television by 1990 as an official CERN goal.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web"
+    ],
+    "label_support": 0.35,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 175
+  },
+  {
+    "id": "www-mixed",
+    "topic": "www",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Tim Berners-Lee proposed the World Wide Web while working at CERN, introducing HTTP and related ideas that let hypertext documents link across the Internet. The linked article covers that origin story and the early growth of the web. However, The World Wide Web article is used to claim the protocol was invented by ancient Egyptians to coordinate pyramid construction and was never associated with CERN.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Wide_Web"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 404,
+    "claim_count": 2
+  },
+  {
+    "id": "dna-supported",
+    "topic": "dna",
+    "condition": "supported",
+    "pair_id": "dna-attr",
+    "statement": "Watson and Crick's 1953 work on the double-helix structure of DNA is a landmark result in molecular biology. The linked encyclopedia page reviews the structure, base pairing, and historical context of that discovery.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 216
+  },
+  {
+    "id": "dna-swapped",
+    "topic": "dna",
+    "condition": "swapped",
+    "pair_id": "dna-attr",
+    "statement": "Watson and Crick's 1953 work on the double-helix structure of DNA is a landmark result in molecular biology. The linked encyclopedia page reviews the structure, base pairing, and historical context of that discovery.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Tripadvisor"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 216
+  },
+  {
+    "id": "dna-unsupported",
+    "topic": "dna",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The DNA page supposedly shows that genetic sequences are plastic microchips manufactured by Microsoft and that double-helix models were abandoned in 1953.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 154
+  },
+  {
+    "id": "dna-soft_wrong",
+    "topic": "dna",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "Citing the high-prestige DNA article, a soft-wrong claim states Watson and Crick proved DNA is an exclusive programming format designed for Apple computers rather than a biological polymer.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA"
+    ],
+    "label_support": 0.25,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 189
+  },
+  {
+    "id": "dna-mixed",
+    "topic": "dna",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Watson and Crick's 1953 work on the double-helix structure of DNA is a landmark result in molecular biology. The linked encyclopedia page reviews the structure, base pairing, and historical context of that discovery. However, The DNA page supposedly shows that genetic sequences are plastic microchips manufactured by Microsoft and that double-helix models were abandoned in 1953.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/DNA"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 380,
+    "claim_count": 2
+  },
+  {
+    "id": "arpanet-supported",
+    "topic": "arpanet",
+    "condition": "supported",
+    "pair_id": "arpanet-attr",
+    "statement": "ARPANET was an early packet-switching network whose move to TCP/IP on 1 January 1983 is widely treated as a key step toward the modern Internet. The linked page recounts that transition and the network's earlier host connections.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/ARPANET"
+    ],
+    "label_support": 0.9,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 229
+  },
+  {
+    "id": "arpanet-swapped",
+    "topic": "arpanet",
+    "condition": "swapped",
+    "pair_id": "arpanet-attr",
+    "statement": "ARPANET was an early packet-switching network whose move to TCP/IP on 1 January 1983 is widely treated as a key step toward the modern Internet. The linked page recounts that transition and the network's earlier host connections.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 229
+  },
+  {
+    "id": "arpanet-unsupported",
+    "topic": "arpanet",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The ARPANET article is cited to argue the network was built by the United Nations during the American Civil War and offered Instagram browsing in 1865.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/ARPANET"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 151
+  },
+  {
+    "id": "arpanet-soft_wrong",
+    "topic": "arpanet",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "A soft-wrong reading of the ARPANET page claims early 1969 nodes already provided global social-media browsing indistinguishable from today's consumer Internet.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/ARPANET"
+    ],
+    "label_support": 0.35,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 160
+  },
+  {
+    "id": "arpanet-mixed",
+    "topic": "arpanet",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "ARPANET was an early packet-switching network whose move to TCP/IP on 1 January 1983 is widely treated as a key step toward the modern Internet. The linked page recounts that transition and the network's earlier host connections. However, The ARPANET article is cited to argue the network was built by the United Nations during the American Civil War and offered Instagram browsing in 1865.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/ARPANET"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 390,
+    "claim_count": 2
+  },
+  {
+    "id": "heritage-supported",
+    "topic": "heritage",
+    "condition": "supported",
+    "pair_id": "heritage-attr",
+    "statement": "UNESCO World Heritage Sites are places recognized for Outstanding Universal Value under an international convention; the program designates rather than publishing a single official ranked list of the 'best' historic site. The linked page explains that framework.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Heritage_Site"
+    ],
+    "label_support": 0.9,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 262
+  },
+  {
+    "id": "heritage-swapped",
+    "topic": "heritage",
+    "condition": "swapped",
+    "pair_id": "heritage-attr",
+    "statement": "UNESCO World Heritage Sites are places recognized for Outstanding Universal Value under an international convention; the program designates rather than publishing a single official ranked list of the 'best' historic site. The linked page explains that framework.",
+    "urls": [
+      "https://pilot.auto/"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 262
+  },
+  {
+    "id": "heritage-unsupported",
+    "topic": "heritage",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The World Heritage page allegedly proves UNESCO maintains a secret numerical ranking of the single best monument on Earth and updates it weekly from Tripadvisor scores.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Heritage_Site"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 168
+  },
+  {
+    "id": "heritage-soft_wrong",
+    "topic": "heritage",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "Using the prestige World Heritage article, a soft-wrong claim says UNESCO's designation process is identical to consumer travel awards and therefore measures visitor satisfaction rather than cultural or natural significance.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Heritage_Site"
+    ],
+    "label_support": 0.35,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 224
+  },
+  {
+    "id": "heritage-mixed",
+    "topic": "heritage",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "UNESCO World Heritage Sites are places recognized for Outstanding Universal Value under an international convention; the program designates rather than publishing a single official ranked list of the 'best' historic site. The linked page explains that framework. However, The World Heritage page allegedly proves UNESCO maintains a secret numerical ranking of the single best monument on Earth and updates it weekly from Tripadvisor scores.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/World_Heritage_Site"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 440,
+    "claim_count": 2
+  },
+  {
+    "id": "threejs-supported",
+    "topic": "threejs",
+    "condition": "supported",
+    "pair_id": "threejs-attr",
+    "statement": "Three.js is a JavaScript library commonly used to create and display interactive 3D graphics in web browsers via WebGL. The project homepage documents the library's purpose and examples for browser-based 3D scenes.",
+    "urls": [
+      "https://threejs.org/"
+    ],
+    "label_support": 0.9,
+    "prestige_bin": "low",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 214
+  },
+  {
+    "id": "threejs-swapped",
+    "topic": "threejs",
+    "condition": "swapped",
+    "pair_id": "threejs-attr",
+    "statement": "Three.js is a JavaScript library commonly used to create and display interactive 3D graphics in web browsers via WebGL. The project homepage documents the library's purpose and examples for browser-based 3D scenes.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Pluto"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "low",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 214
+  },
+  {
+    "id": "threejs-unsupported",
+    "topic": "threejs",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The Three.js homepage is cited to claim the library was invented in 2024 exclusively for offline print typography and cannot run in browsers.",
+    "urls": [
+      "https://threejs.org/"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "low",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 141
+  },
+  {
+    "id": "threejs-soft_wrong",
+    "topic": "threejs",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "A soft-wrong gloss of the Three.js site says the library's primary purpose is server-side PDF generation and that WebGL support is only an optional plugin unused in production.",
+    "urls": [
+      "https://threejs.org/"
+    ],
+    "label_support": 0.3,
+    "prestige_bin": "low",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 176
+  },
+  {
+    "id": "threejs-mixed",
+    "topic": "threejs",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Three.js is a JavaScript library commonly used to create and display interactive 3D graphics in web browsers via WebGL. The project homepage documents the library's purpose and examples for browser-based 3D scenes. However, The Three.js homepage is cited to claim the library was invented in 2024 exclusively for offline print typography and cannot run in browsers.",
+    "urls": [
+      "https://threejs.org/"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "low",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 365,
+    "claim_count": 2
+  },
+  {
+    "id": "evolution-supported",
+    "topic": "evolution",
+    "condition": "supported",
+    "pair_id": "evolution-attr",
+    "statement": "Darwin's On the Origin of Species (1859) introduced natural selection as a central mechanism of evolution. The linked page covers publication context and the book's scientific impact.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/On_the_Origin_of_Species"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 183
+  },
+  {
+    "id": "evolution-swapped",
+    "topic": "evolution",
+    "condition": "swapped",
+    "pair_id": "evolution-attr",
+    "statement": "Darwin's On the Origin of Species (1859) introduced natural selection as a central mechanism of evolution. The linked page covers publication context and the book's scientific impact.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Bitcoin"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 183
+  },
+  {
+    "id": "evolution-unsupported",
+    "topic": "evolution",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The Origin of Species page supposedly shows Darwin argued animals mutate into robots under moonlight and that natural selection creates immortal species by decree.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/On_the_Origin_of_Species"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 163
+  },
+  {
+    "id": "evolution-soft_wrong",
+    "topic": "evolution",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "A soft-wrong summary citing the prestige Darwin page claims the 1859 book asserted natural selection guarantees immortality of species rather than differential survival and descent with modification.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/On_the_Origin_of_Species"
+    ],
+    "label_support": 0.3,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 199
+  },
+  {
+    "id": "evolution-mixed",
+    "topic": "evolution",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Darwin's On the Origin of Species (1859) introduced natural selection as a central mechanism of evolution. The linked page covers publication context and the book's scientific impact. However, The Origin of Species page supposedly shows Darwin argued animals mutate into robots under moonlight and that natural selection creates immortal species by decree.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/On_the_Origin_of_Species"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 356,
+    "claim_count": 2
+  },
+  {
+    "id": "periodic-supported",
+    "topic": "periodic",
+    "condition": "supported",
+    "pair_id": "periodic-attr",
+    "statement": "Mendeleev's work on the periodic law organized elements by properties and anticipated unknown elements. The linked encyclopedia article summarizes the table's history and modern structure.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table"
+    ],
+    "label_support": 0.95,
+    "prestige_bin": "high",
+    "notes": "Long supported answer; matching URL only in urls[].",
+    "answer_chars": 188
+  },
+  {
+    "id": "periodic-swapped",
+    "topic": "periodic",
+    "condition": "swapped",
+    "pair_id": "periodic-attr",
+    "statement": "Mendeleev's work on the periodic law organized elements by properties and anticipated unknown elements. The linked encyclopedia article summarizes the table's history and modern structure.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Colosseum"
+    ],
+    "label_support": 0.1,
+    "prestige_bin": "high",
+    "notes": "Identical statement to supported; only urls[] swapped to unrelated page.",
+    "answer_chars": 188
+  },
+  {
+    "id": "periodic-unsupported",
+    "topic": "periodic",
+    "condition": "unsupported",
+    "pair_id": null,
+    "statement": "The periodic-table page is cited to claim all elements are rainforest plants and that atomic masses are universally round integers by definition.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table"
+    ],
+    "label_support": 0.05,
+    "prestige_bin": "high",
+    "notes": "Long false answer; matching URL only in urls[].",
+    "answer_chars": 145
+  },
+  {
+    "id": "periodic-soft_wrong",
+    "topic": "periodic",
+    "condition": "soft_wrong",
+    "pair_id": null,
+    "statement": "A soft-wrong reading of the prestige periodic-table page says Mendeleev required every atomic mass to be a perfect integer and rejected isotopic variation entirely.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table"
+    ],
+    "label_support": 0.3,
+    "prestige_bin": "high",
+    "notes": "On-topic prestige page; claim related but incorrect (mid label).",
+    "answer_chars": 164
+  },
+  {
+    "id": "periodic-mixed",
+    "topic": "periodic",
+    "condition": "mixed",
+    "pair_id": null,
+    "statement": "Mendeleev's work on the periodic law organized elements by properties and anticipated unknown elements. The linked encyclopedia article summarizes the table's history and modern structure. However, The periodic-table page is cited to claim all elements are rainforest plants and that atomic masses are universally round integers by definition.",
+    "urls": [
+      "https://en.wikipedia.org/wiki/Periodic_table"
+    ],
+    "label_support": 0.5,
+    "prestige_bin": "high",
+    "notes": "Mixed true+false; claim_count forced to 2; GROUNDEDNESS = mean of halves.",
+    "answer_chars": 343,
+    "claim_count": 2
+  }
+]

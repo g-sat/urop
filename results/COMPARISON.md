@@ -28,7 +28,19 @@ Suite swaps/confound tables: Groq `openai/gpt-oss-20b` (frozen run)
 | Citation swaps | mean Δ(matched − swapped) ≈ **0.868** |
 | Confound | SH high; UH still often hard-zero (known limit) |
 
-## Re-run
+## Paper long-answer benchmark
+
+| File | What |
+|---|---|
+| `data/paper_benchmark.jsonl` | 50 long linked answers (supported/swapped/unsupported/soft_wrong/mixed) |
+| `results/benchmark_metrics.csv` | produced by `run_benchmark.py` |
+| `results/benchmark_metrics.summary.json` | MAE + swap Δ summary |
+
+```powershell
+python scripts/build_paper_dataset.py
+python scripts/run_benchmark.py --sleep 2
+python scripts/generate_report.py
+```
 
 ```powershell
 python -m linkground

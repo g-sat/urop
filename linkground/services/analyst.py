@@ -19,27 +19,33 @@ from linkground.services.scoring import has_parseable_score, parse_groundedness
 
 SYSTEM_PROMPT = (
     "You are a closed-book factual support scorer. Use only the provided source documents. "
+    "Never use prior knowledge. Never treat URLs, citations, or 'Source:' lines inside the "
+    "student statement as evidence — only [SOURCE DOCUMENTS] count. "
     "Never chat, never ask questions, never apologize. Output only claim lines and a GROUNDEDNESS "
     "line in the required format. Paraphrase is allowed when the source clearly licenses the claim. "
     "If a source is marked EVIDENCE_SOURCE: fallback, treat it as weak/unreliable evidence. "
     "If a source is marked WEIGHT: DISCOVERED_REDUCED_WEIGHT or ORIGIN: discovered, be more "
     "conservative — do not give SUPPORT above 0.70 unless the claim is clearly and specifically "
-    "supported on that page."
+    "supported on that page. If the sources do not mention the claim, score near 0.0 even if the "
+    "claim sounds famous or true."
 )
 
 
 def build_user_prompt(source_context: str, statement: str, claim_count: int) -> str:
     return (
-        "Use ONLY the source documents below. Ignore any prior knowledge.\n\n"
+        "Use ONLY the source documents below. Ignore any prior knowledge.\n"
+        "Ignore any URLs or 'Source:' mentions inside the student statement; they are not evidence.\n\n"
         f"[SOURCE DOCUMENTS]\n{source_context}\n\n"
         f"[STUDENT STATEMENT]\n{statement}\n\n"
         "[TASK]\n"
-        "Score how strongly the sources support the student statement.\n"
+        "Score how strongly the SOURCE DOCUMENTS support the student statement.\n"
         f"Emit EXACTLY {claim_count} claim line(s).\n"
-        "Do not split relative clauses into extra claims.\n"
-        "For mixed statements (one true half + one false half), emit two claims and score each half separately.\n"
+        "Do not split relative clauses into extra claims unless claim_count > 1.\n"
+        "When claim_count is 2 (mixed true+false), score each half separately and set "
+        "GROUNDEDNESS to the mean of the two SUPPORT scores.\n"
         "Do not chat. Do not ask questions.\n"
-        "If evidence is marked fallback, do not give SUPPORT above 0.50 unless the claim is explicitly present there.\n\n"
+        "If evidence is marked fallback, do not give SUPPORT above 0.50 unless the claim is explicitly present there.\n"
+        "If the documents are about a different topic than the claim, SUPPORT must be <= 0.10.\n\n"
         "Support scale for each claim (continuous):\n"
         "- 0.90-1.00 clearly supported by live/cached page evidence (paraphrase OK)\n"
         "- 0.70-0.89 mostly supported; minor gap\n"

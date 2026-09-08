@@ -11,7 +11,8 @@ Version `3.0.0`.
 ```text
 linkground/          FastAPI + services
 data/lcse/           suite JSONL (swaps, confound, ethics)
-scripts/             suite / linked-eval / rescore / benchmark
+data/paper_benchmark.jsonl   long linked answers for paper tests
+scripts/             suite / benchmark / linked-eval / rescore
 examples/            EG1 + EG2 answers and URL pools
 docs/                research + API notes
 results/             canonical outputs (see COMPARISON.md)
@@ -52,18 +53,25 @@ curl -X POST http://127.0.0.1:8000/v1/evaluate `
 ## Experiments
 
 ```powershell
-# Paper suite
+# Build long-answer paper dataset (50 cases)
+python scripts/build_paper_dataset.py
+
+# Paper suite (swaps / confound)
 python scripts/run_lcse_suite.py --only swaps --output results/lcse_swaps.json
 python scripts/run_lcse_suite.py --only confound --output results/lcse_confound.json
 
-# Long answers (EG1 / EG2)
+# Full paper benchmark (API must be running)
+python scripts/run_benchmark.py --sleep 2
+python scripts/generate_report.py
+
+# Long free-form examples (EG1 / EG2)
 python scripts/evaluate_linked_answer.py --answer-file examples/sample_answer.txt --urls-file examples/url_pool.txt --output results/eg1_claims.json
 python scripts/rescore_linked_eval.py --from-json results/eg1_claims.json --output results/eg1_llm7.json --model mistral-Nemo-Instruct-2407 --sleep 2
 ```
 
 ## Docs
 
-`docs/RESEARCH.md` · `docs/PAPER_ROADMAP.md` · `docs/ARCHITECTURE.md` · `docs/API.md` · `docs/LIMITATIONS.md` · `docs/DEVELOPMENT.md` · `results/COMPARISON.md`
+`docs/DEVELOPER_GUIDE.md` (full architecture + rationale) · `docs/RESEARCH.md` · `docs/PAPER_ROADMAP.md` · `docs/ARCHITECTURE.md` · `docs/API.md` · `docs/LIMITATIONS.md` · `docs/DEVELOPMENT.md` · `results/COMPARISON.md`
 
 ## Deps
 
